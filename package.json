@@ -1,0 +1,65 @@
+{
+  "name": "antoine",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.9.5",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.4.0",
+    "concurrently": "^8.0.1",
+    "dotenv": "^16.0.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.43.9",
+    "react-hot-toast": "^2.4.1",
+    "react-modal": "^3.16.1",
+    "react-redux": "^8.0.5",
+    "react-responsive": "^9.0.2",
+    "react-responsive-carousel": "^3.2.23",
+    "react-router-dom": "^6.10.0",
+    "react-scripts": "5.0.1",
+    "react-simple-star-rating": "^5.1.7",
+    "react-slick": "^0.29.0",
+    "react-toastify": "^9.1.2",
+    "slick-carousel": "^1.8.1",
+    "swiper": "^9.3.0",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "dev": "concurrently \"npm start\" \"npm run backend\"",
+    "_backend": "json-server --watch db.json --routes routes.json",
+    "backend": "npm run _backend -- --port 5000",
+    "_deploy:frontend": "REACT_APP_API_BASE_URL=\"http://10.16.17.135:5001\" npm run build && pm2 --spa --name app-frontend serve -s build -p 8080",
+    "_deploy:backend": "pm2 --name app-backend start npm -- run _backend -- --port 5001 --host 0.0.0.0",
+    "_deploy:pm2-clean": "pm2 delete app-backend app-frontend 2>&1 >/dev/null &",
+    "deploy": "npm run _deploy:pm2-clean && npm run _deploy:frontend && npm run _deploy:backend",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "pm2": "^5.3.0",
+    "serve": "^14.2.0"
+  }
+}

@@ -1,0 +1,320 @@
+.container {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.heading {
+    text-align: left;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 40px;
+    color: #000000;
+    opacity: 1;
+    margin: 40px 0 0 20px;
+}
+
+.deal {
+    padding: 40px 20px;
+    border-bottom: 1px solid #EEEEEE;
+}
+
+.dealSlider {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.dealSlider p {
+    padding: 10px 0;
+}
+
+/* Card */
+.cardList{
+    padding: 0 25px;
+}
+.trendingBooks {
+    padding: 0px 25px 20px;
+    border-bottom: 1px solid #EEEEEE;
+    margin-bottom: 10px;
+}
+
+.card {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    width: 240px !important;
+    height: 480px;
+    margin: 20px 0px 10px 2px;
+    position: relative;
+}
+
+.card .productImg{
+    margin-top: 15px;
+}
+
+.wishlist{
+    position: absolute;
+    right: 23px;
+    top: 20px;
+    background: #FFFFFF;
+    padding: 3px 6px;
+    border-radius: 100%;
+}
+
+.wishlist svg{
+    fill: red;
+}
+
+.card img {
+    background: transparent 0% 0% no-repeat padding-box;
+    width: 208px;
+    height: 312px;
+
+}
+
+.desc {
+    padding: 14px;
+}
+
+.card .title {
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 25px;
+    color: #333F48;
+}
+
+.card .author {
+    text-align: center;
+    font-size: 12px;
+    line-height: 20px;
+    color: #72797E;
+}
+
+.card .price {
+    text-align: center;
+    font: normal normal bold 14px/17px Inter;
+    color: #333F48;
+    /* padding: 2px 0; */
+}
+
+.card button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: #333F48 0% 0% no-repeat padding-box;
+    gap: 10px;
+    width: 208px;
+    height: 50px;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.cartBtn {
+    display: none;
+}
+
+.card:hover {
+    box-shadow: 0px 5px 10px #00000029;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    cursor: pointer;
+}
+
+.card:hover .cartBtn {
+    display: block;
+    cursor: pointer;
+}
+
+
+/* Books By language */
+
+.bookContainer {
+    display: flex;
+    flex-direction: column;
+    height: 346px;
+    width: 384px;
+    margin: 10px 0px;
+}
+
+.bookList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 20px 0px 40px;
+}
+
+.language {
+    display: flex;
+    padding: 20px 35px;
+    justify-content: space-between;
+    text-align: left;
+    font: normal normal bold 20px/40px Inter;
+    letter-spacing: 0px;
+    color: #333F48;
+}
+
+.language a {
+    font-size: 14px;
+    line-height: 17px;
+    color: #333F48;
+}
+
+.bookImg {
+    display: flex;
+    padding: 20px;
+    justify-content: space-evenly;
+}
+
+/* Music Video */
+
+.trendingMusicVideo {
+    margin: 70px 5px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #EEEEEE;
+}
+
+
+/* Banner */
+
+.bannerContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px 20px 40px;
+    border-bottom: 1px solid #EEEEEE;
+}
+
+.bannerContainer img {
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+}
+
+/* .trendingToys {
+    border-bottom: 1px solid #EEEEEE;
+} */
+
+
+/* responsive */
+
+@media only screen and (max-width:767px) {
+    .dealSlider img {
+        width: 100px
+    }
+
+    .dealSlider p {
+        font-size: 12px;
+    }
+
+    .heading {
+        text-align: left;
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 40px;
+        color: #000000;
+        opacity: 1;
+        margin: 0 20px;
+    }
+
+    .card {
+        width: 140px !important;
+        height: 350px;
+        margin: 20px 0px 10px 15px;
+    }
+
+    .card img {
+        width: 140px;
+        height: auto;
+        margin-top: 0px;
+    }
+
+    .card .title {
+        font-size: 12px;
+        font-weight: bold;
+        line-height: 14px;
+    }
+
+    .card .author {
+        font: normal normal normal 10px/13px Inter;
+    }
+
+    .card .price {
+        text-align: center;
+        font: normal normal bold 12px/14px Inter;
+        color: #333F48;
+        margin-top: 5px;
+    }
+
+    .card button {
+        width: 120px;
+        height: 45px;
+        font: normal normal bold 14px/20px Inter;
+        color: #FFFFFF;
+        text-transform: capitalize;
+    }
+
+    .cartBtn {
+        display: block;
+    }
+
+
+    .bookContainer {
+        height: 230px;
+        width: 247px;
+    }
+
+    .bookList {
+        flex-wrap: nowrap;
+        justify-content: normal;
+        overflow-x: scroll;
+        margin-top: 0px;
+        gap: 20px;
+    }
+
+    .language {
+        font-size: 12px;
+        padding: 0px;
+        justify-content: space-around;
+    }
+
+    .bookImg {
+        padding: 24px;
+        gap: 15px;
+    }
+
+    .bookImg img {
+        width: 92px;
+    }
+
+    .bannerContainer img {
+        max-width: 600px;
+        width: 100%;
+        height: auto;
+        margin: 15px 0px;
+    }
+
+    .trendingMusicVideo {
+        margin: 20px 0px;
+        padding: 0px 0px;
+        border-bottom: 1px solid grey;
+    }
+
+    .trendingToys {
+        margin: 0px 0px;
+        padding-bottom: 0px;
+        padding: 0px 25px;
+        border-bottom: 1px solid grey;
+    }
+
+    .bannerContainer {
+        margin: 0px 20px;
+        padding-bottom: 0px;
+    }
+}

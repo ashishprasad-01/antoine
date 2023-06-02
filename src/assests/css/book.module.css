@@ -1,0 +1,399 @@
+.container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+}
+a {
+  text-decoration: none;
+}
+hr {
+  color: #eeeeee;
+  width: 100%;
+}
+
+.listing {
+  display: flex;
+  padding: 20px 0px;
+}
+
+.leftSide {
+  width: 20%;
+  border-right: 1px solid #eeeeee;
+  margin-top: 50px;
+}
+
+.category {
+  text-align: left;
+  font: normal normal bold 13px/20px Inter;
+  color: #000000;
+}
+
+.leftSide ul {
+  text-align: left;
+  font: normal normal normal 12px/24px Inter;
+  color: #333f48;
+  border-bottom: 1px solid #eeeeee;
+  padding: 10px 0px;
+}
+
+.leftSide a {
+  text-decoration: none;
+  color: #333f48;
+}
+
+.leftSide ul:last-child {
+  border: none;
+}
+
+.language {
+  display: flex;
+  gap: 10px;
+}
+
+.language input {
+  border: 1px solid #dddddd;
+}
+
+/* 
+
+*/
+
+.rightSide {
+  width: 80%;
+  padding: 30px 20px;
+}
+
+.topLeft {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 20px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.topLeft p {
+  font-size: 24px;
+  line-height: 40px;
+  font-weight: bold;
+  color: #333f48;
+}
+
+.topRight {
+  display: flex;
+  gap: 10px;
+}
+
+.view {
+  display: flex;
+  border: 1px solid #eeeeee;
+  background: #eeeeee 0% 0% no-repeat padding-box;
+}
+
+.topRight button {
+  height: 50px;
+  width: 84px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  border: none;
+}
+
+#btnColor {
+  background-color: #eeeeee;
+}
+
+#btnColor1 {
+  background-color: #ffffff;
+}
+
+.topRight select {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #eeeeee;
+  height: 50px;
+  width: 200px;
+  text-align: left;
+  font: normal normal normal 14px/26px Inter;
+  color: #333f48;
+  padding: 0px 10px;
+}
+
+/* Grid View  */
+
+.productListing {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  width: 240px !important;
+  height: 450px;
+  margin-bottom: 20px;
+}
+
+.card img {
+  background: transparent 0% 0% no-repeat padding-box;
+  margin-top: 20px;
+  height: 312px;
+  width: 208px;
+}
+
+.card .title {
+  text-align: center;
+  font: normal normal bold 14px/25px Inter;
+  color: #333f48;
+}
+
+.card .author {
+  text-align: center;
+  font: normal normal normal 12px/15px Inter;
+  color: #72797e;
+}
+
+.card .price {
+  text-align: center;
+  font: normal normal bold 14px/17px Inter;
+  color: #333f48;
+}
+
+.card button {
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #333f48 0% 0% no-repeat padding-box;
+  width: 208px;
+  height: 50px;
+  text-align: left;
+  font: normal normal bold 16px/20px Inter;
+  color: #ffffff;
+  text-transform: capitalize;
+}
+
+.card button {
+  display: none;
+}
+
+.card:hover {
+  box-shadow: 0px 5px 10px #00000029;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  cursor: pointer;
+}
+
+.card:hover button {
+  display: flex;
+  cursor: pointer;
+}
+
+/*
+    List View
+*/
+
+.productListingColumn {
+  flex-direction: column;
+}
+
+.cardColumn {
+  margin: 15px 15px 0;
+  width: 100% !important;
+  flex-direction: row;
+  height: 273px;
+  border-bottom: 1px solid #eeeeee;
+  align-items: flex-start;
+  cursor: pointer;
+}
+
+.cardColumn a {
+  display: flex;
+}
+
+.cardColumn:hover {
+  background: none;
+  box-shadow: none;
+}
+
+.cardColumn img {
+  margin-left: 10px;
+  width: 160px;
+  height: 240px;
+}
+
+.cardColumn button {
+  width: 169px;
+  margin-top: 15px;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: capitalize;
+  display: flex;
+}
+
+.descColumn {
+  margin-left: 48px;
+  cursor: pointer;
+}
+.descColumn a {
+  display: flex;
+  flex-direction: column;
+}
+
+.descColumn .title {
+  text-align: left;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: bold;
+  color: #333f48;
+  padding: 12px 0 17px 0;
+}
+
+.descColumn .author {
+  text-align: left;
+  font-size: 14px;
+  line-height: 17px;
+  color: #00838c;
+  padding-bottom: 10px;
+}
+
+#rating {
+  margin-top: 10px;
+}
+
+.descColumn .price {
+  text-align: left;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 21px;
+  color: #333f48;
+  padding: 12px 0;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.paginationContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.pageNumber{
+  border: 1px solid lightgray;
+  color: black;
+  padding: 10px 20px;
+}
+
+.pageNumber a{
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+}
+
+.active{
+  background-color: lightblue;
+}
+
+
+@media only screen and (max-width: 767px) {
+  .leftSide {
+    display:  none;
+  }
+
+  .rightSide {
+    width: 100%;
+    padding: 0px;
+  }
+
+  .topRight select {
+    display: none;
+  }
+
+  .card {
+    width: 155px !important;
+    margin: 16px;
+    height: 338px;
+    justify-content: center;
+    box-shadow: none;
+    background: none;
+  }
+
+  .desc {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .card img {
+    width: 155px;
+  }
+
+  .card .title,
+  .card .price {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .card .author {
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  .card button {
+    display: flex;
+    width: 120px;
+    height: 30px;
+    font-size: 12px;
+    line-height: 20px;
+    margin-top: 10px;
+  }
+
+  .cardColumn {
+    margin: 10px;
+    width: 363px !important;
+    justify-content: flex-start;
+    height: 230px;
+  }
+
+  .cardColumn a {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cardColumn img {
+    height: 210px;
+    width: 140px;
+  }
+
+  .descColumn {
+    margin-left: 24px;
+    align-items: flex-start;
+  }
+
+  .descColumn .title {
+    font-size: 14px;
+    line-height: 20px;
+    padding: 12px 0;
+  }
+
+  .descColumn .author {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .descColumn .price {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .descColumn button {
+    height: 36px;
+    width: 153px;
+    font-size: 14px;
+    line-height: 17px;
+    margin: 0;
+  }
+
+  .rating svg {
+    height: 15px;
+    width: 15px;
+  }
+}

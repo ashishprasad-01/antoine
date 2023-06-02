@@ -1,0 +1,345 @@
+.Container {
+    display: flex;
+    max-width: 1280px;
+    margin: 20px auto
+}
+
+.desktopDetailContainer,
+.mobileDetailContainer{
+    background-color: #F8F8F8;
+    max-width: 1280px;
+    margin: 0px auto
+}
+
+.mobileDetailContainer{
+    background: #FFFFFF;
+    display: none;
+}
+
+.productDetailLeft {
+    max-width: 440px;
+    width: 100%;
+    height: 544px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.productDetailLeft ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.productDetailSlider {
+    height: 440px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #EEEEEE;
+}
+
+.productDetailSlider img {
+    width: 294px !important;
+    display: inline-block;
+}
+
+.productDetailRight {
+    width: calc(100% - 440px);
+    padding: 0 0 0 80px;
+}
+
+.description p {
+    font-size: 24px;
+    line-height: 20px;
+    font-weight: bold;
+    color: #333F48;
+    padding: 0 0 16px 0;
+}
+
+.description p:nth-child(2) {
+    font-size: 14px;
+    line-height: 17px;
+    color: #333F48;
+}
+
+#price {
+    font-size: 24px;
+    line-height: 26px;
+    font-weight: bold;
+    color: #333F48;
+    margin-top: 24px;
+}
+
+.description span {
+    font-size: 14px;
+    line-height: 17px;
+    color: #00838C;
+    margin-bottom: 5px;
+}
+
+#rating {
+    margin-bottom: 5px;
+}
+
+#quantity p {
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: bold;
+    color: #333F48;
+    margin-bottom: 8px;
+}
+
+.quantity {
+    width: 104px;
+    height: 48px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #EEEEEE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quantity button {
+    border: none;
+    font-size: 20px;
+    background: #FFFFFF;
+    color: #333F48;
+    margin: 0 10px;
+}
+
+.quantity span {
+    margin: 0 10px;
+}
+
+.loginButton {
+    display: flex;
+    gap: 16px;
+}
+
+.loginButton button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    gap: 10px;
+    height: 48px;
+    width: 185px;
+    background: #333F48 0% 0% no-repeat padding-box;
+    color: #FFFFFF;
+    margin-top: 28px;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 20px;
+}
+
+.loginButton button svg {
+    fill: #FFFFFF;
+}
+
+.loginButton button:last-child svg {
+    fill: #333F48;
+}
+
+.loginButton button:last-child {
+    max-width: 320px;
+    width: 100%;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 2px solid #333F48;
+    color: #333F48;
+}
+
+.item {
+    display: flex;
+    gap: 32px;
+    margin-top: 28px;
+}
+
+.items {
+    display: flex;
+}
+
+.items svg {
+    height: 16px;
+    width: 16px;
+    fill: #333F48;
+}
+
+.items {
+    display: flex;
+    gap: 5px;
+    color: #333F48;
+    /* justify-content: space-between; */
+}
+
+.delivery {
+    margin-top: 45px;
+}
+
+.delivery p {
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 18px;
+    color: #333F48;
+    margin-top: 12px;
+}
+
+
+/* Detail page */
+
+
+
+.heading {
+    border-bottom: 1px solid #0000001A;
+}
+
+.heading .items {
+    max-width: 570px;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.heading .item {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    margin: 32px 0 0 0;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: bold;
+    color: #72797E
+}
+
+.heading .item1 {
+    border-bottom: 2px solid #333F48;
+    color: #333F48;
+}
+
+.detail p {
+    padding: 32px 40px 40px 40px;
+    text-align: justify;
+    font-size: 14px;
+    line-height: 24px;
+    color: #333F48;
+}
+
+
+.mobileDetailContainer .item{
+    background-color: #F8F8F8;
+    align-items: center;
+}
+
+/* 
+    Media query Responsive
+ */
+
+@media only screen and (max-width:767px) {
+    .productDetailLeft ul {
+        display: none;
+    }
+
+    .Container {
+        flex-direction: column;
+    }
+
+    .productDetailLeft {
+        height: 440px;
+    }
+
+    .productDetailRight {
+        width: 90%;
+        padding: 16px;
+    }
+
+    .description p {
+        font-size: 20px;
+        line-height: 28px;
+        padding: 0;
+    }
+
+    .description span {
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    .description p:nth-child(2) {
+        font-size: 12px;
+        line-height: 15px;
+        margin-bottom: 10px;
+    }
+
+    #price {
+        font-size: 20px;
+    }
+
+    #quantity p {
+        margin: 35px 0 8px 0;
+    }
+
+    .loginButton {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0;
+    }
+
+    .loginButton button {
+        max-width: 345px;
+        width: 100%;
+    }
+
+    .loginButton button:last-child {
+        max-width: 345px;
+        
+    }
+
+    .item {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .desktopDetailContainer{
+        display: none;
+    }
+
+    .mobileDetailContainer{
+        display: block;
+    }
+
+    .heading{
+        margin: 10px;
+        border: none;
+    }
+
+    .heading p{
+        padding: 0px;
+    }
+
+    .heading .items{
+        max-width: 1280px;
+        width: 100%;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .heading .item {
+        margin-top: 10px;
+        padding: 20px 10px;
+        border-bottom: 1px solid #EEEEEE;
+        flex-direction: column;
+    }
+
+    .heading #item{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        font-size: 15px;
+        color: #333F48;
+    }
+
+    .detail p {
+        padding: 0;
+        font-size: 12px;
+        font-weight: normal;
+        line-height: 20px;
+        padding-top: 20px;
+        border-top: 1px solid #EEEEEE;
+    }
+
+}

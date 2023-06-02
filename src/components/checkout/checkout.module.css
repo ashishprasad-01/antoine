@@ -1,0 +1,745 @@
+#leftSideMobileHeader {
+  display: none;
+}
+
+.topHeader {
+  background-color: #333f48;
+  height: 5px;
+}
+
+.middleHeader {
+  background-color: #eeeeee;
+}
+
+#logo {
+  max-width: 100px;
+  text-align: center;
+}
+
+#logoWrapper {
+  padding: 0 15px;
+  margin-top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.middleHeaderRight {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.middleHeaderRight span {
+  color: #333f48;
+  font-size: 13px;
+}
+
+.CheckoutWrapper {
+  padding: 0 15px;
+}
+
+.CheckoutTitle {
+  font-size: 24px;
+  color: #333f48;
+  margin: 30px 0;
+}
+
+.progressbarContainer {
+  display: flex;
+  margin-bottom: 74px;
+}
+
+.progressbarTitle {
+  display: flex;
+  justify-content: space-around;
+  width: 386px;
+  margin-top: 15px;
+}
+
+.reviewSvg {
+  display: flex;
+}
+
+.reviewItem {
+  border: 7px solid #00838c;
+  border-radius: 50%;
+  padding: 5px 10px;
+  margin-top: -20px;
+}
+
+.svgLine {
+  height: 6px;
+  width: 73px;
+  background-color: #00838c;
+}
+
+.svgLine::before{
+  border-radius: 10px;
+}
+
+.checked {
+  background-color: #eeeeee;
+}
+
+.checkedBorder {
+  border-color: #eeeeee;
+}
+
+.componentContainer,
+.PaymentComponentContainer {
+  padding: 0 15px;
+  display: flex;
+}
+
+/* Checkout Left Side */
+
+.addressContainer {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 20px;
+}
+
+.addressWrapper {
+  padding: 0 15px;
+}
+
+.address {
+  padding: 20px;
+  border: 1px solid #dddddd;
+  max-width: 300px;
+  width: 100%;
+}
+
+
+.addressIsActive {
+  border: 1px solid #333f48;
+}
+
+.addressContent {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.addressIsActive input{
+    position: absolute;
+    top: -21px;
+    right: -21px;
+    border: none;
+    accent-color: #333F48;
+    width: 30px;
+    height: 30px;
+}
+
+.addressTitle {
+  margin-bottom: 10px;
+}
+
+.addressTitle,
+.addressBody,
+.addressMno,
+.addressContent strong {
+  font-size: 16px;
+}
+
+.addressBody {
+  color: #666666;
+  margin-bottom: 15px;
+}
+
+.addressMno {
+  color: #00838c;
+  margin-bottom: 15px;
+}
+
+.addressContent strong {
+  color: #333f48;
+}
+
+.addAddress {
+  margin-bottom: 30px;
+}
+
+.addAddress button {
+  color: #333f48;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 14px 32px;
+  background-color: transparent;
+  border: 2px solid #333f48;
+  cursor: pointer;
+}
+
+.paymentMethodContainer {
+  padding: 0 15px;
+}
+
+.paymentMethod {
+  margin-bottom: 20px;
+}
+
+.paymentMethod label {
+  font-weight: 600;
+  color: #333f48;
+  font-size: 16px;
+}
+
+.paymentMethod span {
+  color: #333f48;
+  font-size: 16px;
+  margin-left: 48px;
+}
+
+.shippingMethodForm {
+  max-width: 700px;
+  width: 100%;
+  border-top: 1px solid #cccccc;
+  /* padding-top: 20px; */
+}
+
+.FormContainer {
+  max-width: 700px;
+  width: 100%;
+  padding: 20px 15px 0 15px;
+}
+
+.shippingMethodFormFeild select {
+  width: 100%;
+  margin-top: 8px;
+  padding: 12px 15px;
+  border: 1px solid #cccccc;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  font-size: 14px;
+  color: #666666;
+  outline: none;
+  /* background-image: url(../img/arrow-dropdown-black.svg); */
+  appearance: none;
+  background-repeat: no-repeat;
+  background-position: 96% 50%;
+  margin-bottom: 20px;
+}
+
+.shippingMethodFormFeild label {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.pickupAddressTitle {
+  padding: 15px 20px;
+  background-color: #f8f8f8;
+  margin-bottom: 5px;
+}
+
+.pickupAddressTitle span {
+  margin-left: 10px;
+}
+
+.pickupAddress {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.pickupAddress span {
+  margin-left: 0;
+  font-size: 16px;
+}
+
+.pickupAddressMno {
+  margin-top: 14px;
+}
+
+.moreAboutStore {
+  margin-top: 20px;
+  display: flex;
+  gap: 30px;
+  font-size: 16px;
+  color: #00838c;
+}
+
+.leftSideFooter {
+  padding: 0 15px;
+  margin-top: 20px;
+}
+
+.leftSideFooterForm {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.leftSideFooterForm input {
+  padding: 15px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #cccccc;
+  outline: none;
+  font-size: 14px;
+  color: #666666;
+  margin-bottom: 16px;
+}
+
+.leftSideFooterForm:last-child input {
+  margin-bottom: 0;
+}
+
+.leftSideFooterBtn {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 15px;
+  margin-top: 32px;
+  margin-bottom: 127px;
+}
+
+.leftSideFooterBtn button,
+.footerContent button,
+.paymentAddressFooter button {
+  background-color: #333f48;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 14px 32px;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+}
+
+.newAddressFormFeild {
+  width: 100%;
+  margin: 0 20px 0 0;
+}
+
+.newAddressContainer {
+  padding: 0 20px;
+}
+
+.newAddressWrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eeeeee;
+  padding-bottom: 10px;
+  margin-top: 40px;
+}
+
+.newAddressWrapper svg {
+  cursor: pointer;
+  fill: #dddddd;
+  height: 20px;
+  width: 20px;
+}
+
+.newAddressTitle {
+  color: #333f48;
+  font-size: 22px;
+}
+
+.newAddressForm {
+  margin-top: 24px;
+  height: 400px;
+  overflow-y: scroll;
+  margin-bottom: 20px;
+}
+
+.newAddressFormFeild {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.newAddressFormFeild label {
+  color: #333f48;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.newAddressFormFeild input,
+.newAddressFormFeild select {
+  margin-top: 10px;
+  padding: 20px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #dddddd;
+  outline: none;
+}
+
+.newAddressFormFeild select {
+  /* background-image: url(../img/arrow-dropdown-black.svg); */
+  appearance: none;
+  background-repeat: no-repeat;
+  background-position: 96% 50%;
+  padding: 20px 25px 20px 20px;
+  margin-right: 0;
+}
+
+.newAddressFooter {
+  background-color: #f8f8f8;
+  padding: 20px 20px;
+}
+
+.footerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footerContent {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footerContent a {
+  font-size: 14px;
+  color: #00838c;
+}
+
+/* Checkout Right Side */
+
+.checkoutRightContainer {
+  width: 30%;
+  margin-left: 30px;
+}
+
+.CheckoutRightTitle {
+  background-color: #f4f4f4;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.CheckoutRightTitle strong {
+  color: #252525;
+  font-size: 16px;
+}
+
+.CheckoutRightTitle svg {
+  cursor: pointer;
+}
+
+.cartItems {
+  padding: 12px 20px;
+  border-bottom: 1px solid #f4f4f4;
+}
+
+.CheckoutRightWrapper {
+  border: 1px solid #f4f4f4;
+  margin-bottom: 10px;
+}
+
+.CheckoutRightBody {
+  padding: 15px 20px;
+  height: 300px;
+  overflow-y: scroll;
+}
+
+.cartItemBody {
+  display: flex;
+}
+
+.cartItemContent {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-left: 10px;
+}
+
+.cartItemDetail {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.cartItemDetail strong,
+.cartItemPrice strong {
+  font-size: 12px;
+  color: #333f48;
+}
+
+.cartItemDetail span {
+  font-size: 12px;
+  color: #72797e;
+}
+
+/* Payment Left Side */
+.leftContainer,
+.PaymentleftContainer {
+  width: 70%;
+}
+
+.leftSideHeader {
+  padding: 12px 20px;
+  background-color: #f4f4f4;
+  margin-bottom: 26px;
+}
+
+.PaymentleftSideBody {
+  padding: 0 15px;
+  margin-bottom: 127px;
+}
+
+.leftSideHeader strong {
+  font-size: 16px;
+  color: #252525;
+}
+
+.payment {
+  margin-bottom: 20px;
+}
+
+.payment:last-child {
+  margin-bottom: 0;
+}
+
+.payment label {
+  color: #333f48;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.paymentFormContainer {
+  padding: 0 20px;
+}
+
+.paymentFormHeader label {
+  color: #333333;
+  font-weight: normal;
+  margin-left: 10px;
+}
+
+.PaymentFormBody {
+    max-width: 700px;
+    width: 100%;
+  padding: 15px 20px;
+}
+
+.paymentAddress {
+  color: #666666;
+}
+
+.paymentAddress > span {
+  color: #00838c;
+}
+
+.paymentCards {
+  display: flex;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.paymentFormContent {
+  margin-top: 16px;
+}
+
+.paymentFormFeild {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.paymentFormFeild select,
+.paymentFormFeild input {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #cccccc;
+  padding: 15px 15px;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  outline: none;
+}
+
+.selectContainer{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.selectContainer select {
+    max-width: 260px;
+    width: 100%;
+}
+
+#cardVeify {
+  max-width: 340px;
+  width: 100%;
+}
+
+/* Payment Right Side */
+
+.cartItemTotalWrapper {
+  padding: 12px 20px;
+}
+
+.cartItemToatlBody {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px dashed #cccccc;
+}
+
+.cartItemTotalContent {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 13px;
+}
+
+.cartItemTotalContent span {
+  font-size: 14px;
+  color: #252525;
+}
+
+#cartItemGrandTotal {
+  padding-top: 13px;
+  /* margin-bottom: 30px; */
+}
+
+#paymentCartItems {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.toggleSvg {
+  transform: rotate(180deg);
+}
+
+.PaymentRightSideShipAddress {
+  margin-bottom: 10px;
+}
+
+.shipAddressConatiner {
+  border: 1px solid #f4f4f4;
+}
+
+.shipAddressBody {
+  padding: 0 15px;
+  margin-top: 17px;
+  margin-bottom: 20px;
+}
+
+.shipAddressBody strong {
+  color: #252525;
+  font-size: 14px;
+}
+
+.shipAddress {
+  font-style: normal;
+  color: #666666;
+  font-size: 14px;
+  margin-top: 10px;
+  line-height: 22px;
+}
+
+.fixedRate {
+  font-weight: normal;
+}
+
+.modal {
+  max-width: 700px;
+  width: 100%;
+  position: absolute;
+  background-color: white;
+}
+
+/* Media Query */
+
+@media screen and (max-width: 767px) {
+  .modal {
+    width: 100% !important;
+  }
+
+  .progressbarContainer,
+  .checkoutRightContainer {
+    display: none;
+  }
+
+  .CheckoutTitle {
+    margin: 20px 0;
+  }
+
+  .leftContainer,
+  .addAddress button {
+    width: 100%;
+  }
+
+  .addresWrapper {
+    padding: 0;
+  }
+
+  .addressContainer {
+    flex-direction: column;
+  }
+
+  .address {
+    max-width: 100%;
+    width: auto;
+  }
+
+  .footerContainer {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #leftSideMobileHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #leftSideMobileHeader span {
+    color: #252525;
+    font-size: 14px;
+  }
+
+  .mobileCheckoutCartIcon {
+    position: relative;
+  }
+
+  #mobileCartItemCount {
+    position: absolute;
+    top: -8px;
+    background: black;
+    color: white !important;
+    padding: 2px 6px;
+    border-radius: 100%;
+    right: -10px;
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  .FormContainer {
+    padding: 0 0;
+  }
+
+  .shippingMethodFormFeild {
+    padding: 20px 15px 10px;
+  }
+
+  .PaymentComponentContainer {
+    padding: 0;
+  }
+
+  .PaymentleftContainer {
+    width: 100%;
+  }
+
+  .payment label,
+  .paymentFormHeader label,
+  .paymentAddressBody {
+    font-size: 14px;
+  }
+
+  .paymentAddressBody,
+  .paymentCards {
+    font-size: 14px;
+    margin-left: 15px;
+  }
+
+  .PaymentFormBody {
+    padding: 15px 0px;
+  }
+
+  .paymentFormFeild select,
+  .paymentFormFeild input {
+    padding: 10px 10px;
+  }
+}
