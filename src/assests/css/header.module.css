@@ -424,6 +424,10 @@
         display: none;
     }
 
+    .middleContainer{
+        padding: 0 20px;
+    }
+
     .offer {
         display: block;
         text-align: center;

@@ -59,24 +59,24 @@ export default function Magazines() {
     setCurrenPage(id);
   };
 
-  const submit = ({sortProducts}) => {
+  const submit = ({ sortProducts }) => {
     switch (sortProducts) {
       case "name_a_z":
-        console.log('case 1 called');
-        dispatch(sortProductsByName())
+        console.log("case 1 called");
+        dispatch(sortProductsByName());
         break;
-      
+
       case "name_z_a":
-        dispatch(sortProductsByName("DESC"))
-        break
+        dispatch(sortProductsByName("DESC"));
+        break;
 
       case "l_to_h":
-        dispatch(sortProductsByPrice("ASC"))
-        break
+        dispatch(sortProductsByPrice());
+        break;
 
       case "h_to_l":
-        dispatch(sortProductsByPrice("DESC"))
-        break
+        dispatch(sortProductsByPrice("DESC"));
+        break;
 
       default:
         break;
@@ -133,10 +133,7 @@ export default function Magazines() {
             <p>Books</p>
             <div className={book.topRight}>
               <form onChange={handleSubmit(submit)}>
-                <select
-                  {...register("sortProducts")}
-                  defaultValue={"name_a_z"}
-                >
+                <select {...register("sortProducts")} defaultValue={"name_a_z"}>
                   <option defaultChecked value="name_a_z">
                     Sort By Name A to Z
                   </option>
@@ -335,7 +332,7 @@ export default function Magazines() {
                   onClick={() => prevPage()}
                   disabled={currentPage === 1 ? true : false}
                 >
-                  <a>&lt;&lt;</a>
+                  &lt;&lt;
                 </button>
               </li>
 
@@ -346,7 +343,7 @@ export default function Magazines() {
                     currentPage === n ? book.active : ""
                   }`}
                 >
-                  <a onClick={() => changePage(n)}>{n}</a>
+                  <p onClick={() => changePage(n)}>{n}</p>
                 </li>
               ))}
 
@@ -355,7 +352,7 @@ export default function Magazines() {
                   onClick={() => nextPage()}
                   disabled={currentPage === page ? true : false}
                 >
-                  <a> &gt;&gt;</a>
+                  &gt;&gt;
                 </button>
               </li>
             </ul>
