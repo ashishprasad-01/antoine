@@ -8,7 +8,7 @@ import "slick-carousel/slick/slick-theme.css";
 export default function Deals({ deals }) {
     const settings = {
         dots: false,
-        infinite: false,
+        infinite: true,
         speed: 500,
         slidesToShow: 7,
         slidesToScroll: 1,
