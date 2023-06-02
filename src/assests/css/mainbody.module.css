@@ -229,6 +229,11 @@
         margin: 20px 0px 10px 15px;
     }
 
+    .wishlist{
+        right: 5px;
+        top: 5px;
+    }
+
     .card img {
         width: 140px;
         height: auto;
@@ -239,6 +244,7 @@
         font-size: 12px;
         font-weight: bold;
         line-height: 14px;
+        min-height: 30px;
     }
 
     .card .author {
@@ -316,5 +322,11 @@
     .bannerContainer {
         margin: 0px 20px;
         padding-bottom: 0px;
+    }
+
+    .card:hover {
+        box-shadow: none;
+        background: transparent;
+        cursor: pointer;
     }
 }
