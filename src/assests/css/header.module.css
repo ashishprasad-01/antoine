@@ -424,20 +424,6 @@
   }
 }
 
-.sideNav {
-  width: 100%;
-  animation:backwards 0.5s reverse;
-}
-
-@keyframes backwards {
-  from {
-    left: -100%;
-  }
-  to {
-    left: 0%;
-  }
-}
-
 /*   Responsive    */
 
 @media only screen and (max-width: 767px) {
