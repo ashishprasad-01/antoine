@@ -316,6 +316,12 @@ hr {
     background: none;
   }
 
+  .card:hover {
+    box-shadow: none;
+    background: transparent;
+    cursor: pointer;
+  }
+
   .desc {
     margin-top: 10px;
     display: flex;
