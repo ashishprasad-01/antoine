@@ -8,6 +8,7 @@ import {
 } from "../../store/actions/headerNavAction";
 import { getMagazinesCategory } from "../../store/actions/listingAction";
 import img from "../../assests/images/icons8-left-arrow-48.png";
+import { path } from "../../constants/path";
 export default function HamburgerMenu({ toggle }) {
   const { navCategories, country } = useSelector((state) => state.navigation);
   const { category } = useSelector((state) => state.product);
@@ -222,15 +223,16 @@ export default function HamburgerMenu({ toggle }) {
                       return (
                         <>
                           <li
+                            onClick={() => toggle()}
                             key={index}
                             className={header.sideNavList}
-                            onClick={() => {
-                              setArrow(!arrow);
-                              setName(navItem);
-                            }}
                           >
-                            <Link>{navItem}</Link>
+                            <Link to={path.magazineListing}>{navItem}</Link>
                             <svg
+                              onClick={() => {
+                                setArrow(!arrow);
+                                setName(navItem);
+                              }}
                               xmlns="http://www.w3.org/2000/svg"
                               width="7"
                               height="12"
@@ -389,9 +391,8 @@ export default function HamburgerMenu({ toggle }) {
               )}
             </div>
           )}
-
         </div>
-          <div id={header.abc} onClick={()=>toggle()}></div>
+        <div id={header.abc} onClick={() => toggle()}></div>
       </div>
     </>
   );

@@ -578,6 +578,15 @@
       "img": "images/jocelyne.png"
     }
   ],
-  "cart": [],
+  "cart": [
+    {
+      "title": "Modern Art In Cold War Beirut",
+      "author": "Rogers, Sarah",
+      "img": "images/modern art.png",
+      "price": 800000,
+      "qty": 1,
+      "id": 1
+    }
+  ],
   "wishlist": []
 }
