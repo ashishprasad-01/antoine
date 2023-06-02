@@ -16,7 +16,7 @@ export default function ProductDetail() {
   const dispatch = useDispatch()
   let { id } = useParams()
   let [quantity, setQuantity] = useState(1)
-  // console.log(productDetail);
+  console.log(productDetail);
 
   useEffect(() => {
     dispatch(getProductByID(id))
@@ -31,7 +31,7 @@ export default function ProductDetail() {
               productDetail.thumbImg && productDetail.thumbImg.map((item, index) => {
                 return (
                   <div className={style.productDetailSlider} key={index}>
-                    <img src={`${process.env.REACT_APP_API_BASE_URL}/${item}`} alt="product-detail-img" />
+                    <img src={`/${item}`} alt="product-detail-img" />
                   </div>
                 )
               })

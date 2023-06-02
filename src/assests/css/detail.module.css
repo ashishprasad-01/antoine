@@ -43,7 +43,7 @@
 
 .productDetailRight {
     width: calc(100% - 440px);
-    padding: 0 0 0 80px;
+    padding: 20px 0 0 80px;
 }
 
 .description p {
