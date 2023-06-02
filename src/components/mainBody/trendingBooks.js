@@ -82,7 +82,7 @@ export default function TrendingBooks() {
               return (
                 <div className={style.card} key={item.id}>
                   <img
-                    src={`${process.env.REACT_APP_API_BASE_URL}/${item.img}`}
+                    src={item.img}
                     alt={item.title}
                   />
                   <div
