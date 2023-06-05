@@ -138,6 +138,7 @@
   flex-grow: 1;
   margin: 0 100px;
   position: relative;
+  
   border: 1px solid #333f48;
 }
 
@@ -145,6 +146,7 @@
   height: 40px;
   width: 70px;
   text-align: center;
+  border: none;
   border-right: 1px solid #333f48;
   outline: none;
 }
@@ -197,32 +199,34 @@
 .navigation {
   text-align: center;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   padding: 20px 0px;
   flex-wrap: wrap;
   border-top: 1px solid #dddddd;
   position: relative;
 }
 
-.navigation .navList > a {
+#navlistLink:hover{
+  color: skyblue;
+}
+
+.navigation .navList a {
   color: #333f48;
   font-weight: bold;
   font-size: 18px;
   line-height: 21px;
   text-decoration: none;
-  padding: 30px;
+  padding: 20px 30px;
 }
 
 .navigation li {
   border-right: 1px solid #dddddd;
-  /* padding: 10px 20px 10px 10px;
-    margin: 7px; */
 }
 
-.navigation li:last-child {
+/* .navigation li:last-child {
   border-right: 0px;
   padding: 0px;
-}
+} */
 
 .megaMenuContainer {
   position: absolute;

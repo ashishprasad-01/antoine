@@ -139,7 +139,7 @@
 }
 
 .loginButton button:last-child {
-    /* max-width: 320px; */
+    max-width: 320px;
     width: 100%;
     background: #FFFFFF 0% 0% no-repeat padding-box;
     border: 2px solid #333F48;
@@ -336,6 +336,15 @@
         line-height: 20px;
         padding-top: 20px;
         border-top: 1px solid #EEEEEE;
+    }
+
+    .loginButton button:last-child {
+        /* max-width: 320px; */
+        width: 100%;
+        max-width: 100%;
+        /* background: #FFFFFF 0% 0% no-repeat padding-box; */
+        /* border: 2px solid #333F48; */
+        /* color: #333F48; */
     }
 
 }

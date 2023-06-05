@@ -1,5 +1,5 @@
 const sortByName = (products, type = "ASC") => {
-    console.log('called');
+  console.log(products);
   if (type === "ASC") {
     products?.sort((x, y) => {
       let a = x.title.toUpperCase(),
@@ -18,7 +18,7 @@ const sortByName = (products, type = "ASC") => {
 };
 
 const sortByPrice = (products, type = "ASC") => {
-    console.log(products);
+  console.log(products);
   if (type === "ASC") {
     products?.sort(function (x, y) {
       return x.price - y.price;
@@ -30,5 +30,6 @@ const sortByPrice = (products, type = "ASC") => {
     });
   }
 };
+
 
 export { sortByName, sortByPrice };

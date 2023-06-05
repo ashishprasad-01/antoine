@@ -24,7 +24,7 @@ export default function HeaderBottom({ navCategories }) {
               navCategories && navCategories?.map((navItem, index) => {
                 return (
                   <li key={index} className={header.navList}  /* onMouseOver={()=> {setState(true)}} onMouseOut={()=>{setState(false)}} */>
-                    <Link to={navItem}>{navItem}</Link>
+                    <Link to={navItem} id={header.navlistLink}>{navItem}</Link>
                   </li>
                 )
               })

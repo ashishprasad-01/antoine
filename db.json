@@ -456,6 +456,13 @@
       "author": "Pascale Maret",
       "price": 800000,
       "img": "images/Danser.png",
+      "category": [
+        "Historical Fiction"
+      ],
+      "language": [
+        "French",
+        "spanish"
+      ],
       "thumbImg": [
         "images/Danser.png",
         "images/Danser.png",
@@ -469,9 +476,15 @@
       "title": "The Sin Eater",
       "author": " Campisi, Megan",
       "narrator": "Ashish",
-      "publisher": "Varun",
+      "publisher": "Vikash",
       "price": 400000,
       "img": "images/sin eater.png",
+      "category": [
+        "Manga"
+      ],
+      "language": [
+        "French"
+      ],
       "thumbImg": [
         "images/sin eater.png",
         "images/sin eater.png",
@@ -484,109 +497,288 @@
       "title": "Hercules - Les Ecuries D'augias",
       "author": "Montardre Helene",
       "price": 200000,
-      "img": "images/hercule.png"
+      "img": "images/hercule.png",
+      "category": [
+        "Historical Fiction",
+        "Manga"
+      ],
+      "language": [
+        "French",
+        "German"
+      ],
+      "thumbImg": [
+        "images/hercule.png",
+        "images/hercule.png",
+        "images/hercule.png",
+        "images/hercule.png"
+      ]
     },
     {
       "id": 4,
       "title": "Modern Art In Cold War Beirut",
       "author": "Rogers, Sarah",
       "price": 800000,
-      "img": "images/modern art.png"
+      "img": "images/modern art.png",
+      "category": [
+        "Arts & Photography"
+      ],
+      "language": [
+        "Polish"
+      ],
+      "thumbImg": [
+        "images/modern art.png",
+        "images/modern art.png",
+        "images/modern art.png",
+        "images/modern art.png"
+      ]
     },
     {
       "id": 5,
       "title": "Jocelyne Khoueiry",
       "author": "Rogers, Sarah",
       "price": 800000,
-      "img": "images/jocelyne.png"
+      "img": "images/jocelyne.png",
+      "category": [
+        "Biography",
+        "Historical Fiction"
+      ],
+      "language": [
+        "Spanish",
+        "German",
+        "French",
+        "Polish"
+      ],
+      "thumbImg": [
+        "images/jocelyne.png",
+        "images/jocelyne.png",
+        "images/jocelyne.png",
+        "images/jocelyne.png"
+      ]
     },
     {
       "id": 6,
       "title": "Danser Jusqu'aux Etoils",
       "author": "Pascale Maret",
       "price": 800000,
-      "img": "images/Danser.png"
+      "img": "images/Danser.png",
+      "category": [
+        "Historical Fiction"
+      ],
+      "language": [
+        "French",
+        "spanish"
+      ],
+      "thumbImg": [
+        "images/Danser.png",
+        "images/Danser.png",
+        "images/Danser.png",
+        "images/Danser.png"
+      ]
     },
     {
       "id": 7,
       "title": "The Sin Eater",
       "author": " Campisi, Megan",
       "price": 400000,
-      "img": "images/sin eater.png"
+      "img": "images/sin eater.png",
+      "category": [
+        "Manga"
+      ],
+      "language": [
+        "French"
+      ],
+      "thumbImg": [
+        "images/sin eater.png",
+        "images/sin eater.png",
+        "images/sin eater.png",
+        "images/sin eater.png"
+      ]
     },
     {
       "id": 8,
       "title": "Hercules - Les Ecuries D'augias",
       "author": "Montardre Helene",
       "price": 200000,
-      "img": "images/hercule.png"
+      "img": "images/hercule.png",
+      "category": [
+        "Historical Fiction",
+        "Manga"
+      ],
+      "language": [
+        "French",
+        "German"
+      ],
+      "thumbImg": [
+        "images/hercule.png",
+        "images/hercule.png",
+        "images/hercule.png",
+        "images/hercule.png"
+      ]
     },
     {
       "id": 9,
       "title": "Modern Art In Cold War Beirut",
       "author": "Rogers, Sarah",
       "price": 800000,
-      "img": "images/modern art.png"
+      "img": "images/modern art.png",
+      "category": [
+        "Arts & Photography"
+      ],
+      "language": [
+        "Polish"
+      ],
+      "thumbImg": [
+        "images/modern art.png",
+        "images/modern art.png",
+        "images/modern art.png",
+        "images/modern art.png"
+      ]
     },
     {
       "id": 10,
       "title": "Jocelyne Khoueiry",
       "author": "Rogers, Sarah",
       "price": 800000,
-      "img": "images/jocelyne.png"
+      "img": "images/jocelyne.png",
+      "category": [
+        "Biography",
+        "Historical Fiction"
+      ],
+      "language": [
+        "Spanish",
+        "German",
+        "French",
+        "Polish"
+      ],
+      "thumbImg": [
+        "images/jocelyne.png",
+        "images/jocelyne.png",
+        "images/jocelyne.png",
+        "images/jocelyne.png"
+      ]
     },
     {
       "id": 11,
       "title": "Modern Art In Cold War Beirut",
       "author": "Rogers, Sarah",
       "price": 800000,
-      "img": "images/modern art.png"
+      "img": "images/modern art.png",
+      "category": [
+        "Arts & Photography"
+      ],
+      "language": [
+        "Polish"
+      ],
+      "thumbImg": [
+        "images/modern art.png",
+        "images/modern art.png",
+        "images/modern art.png",
+        "images/modern art.png"
+      ]
     },
     {
       "id": 12,
       "title": "Danser Jusqu'aux Etoils",
       "author": "Pascale Maret",
       "price": 800000,
-      "img": "images/Danser.png"
+      "img": "images/Danser.png",
+      "category": [
+        "Historical Fiction"
+      ],
+      "language": [
+        "French",
+        "spanish"
+      ],
+      "thumbImg": [
+        "images/Danser.png",
+        "images/Danser.png",
+        "images/Danser.png",
+        "images/Danser.png"
+      ]
     },
     {
       "id": 13,
       "title": "The Sin Eater",
       "author": " Campisi, Megan",
       "price": 400000,
-      "img": "images/sin eater.png"
+      "img": "images/sin eater.png",
+      "category": [
+        "Manga"
+      ],
+      "language": [
+        "French"
+      ],
+      "thumbImg": [
+        "images/sin eater.png",
+        "images/sin eater.png",
+        "images/sin eater.png",
+        "images/sin eater.png"
+      ]
     },
     {
       "id": 14,
       "title": "Hercules - Les Ecuries D'augias",
       "author": "Montardre Helene",
       "price": 200000,
-      "img": "images/hercule.png"
+      "img": "images/hercule.png",
+      "category": [
+        "Historical Fiction",
+        "Manga"
+      ],
+      "language": [
+        "French",
+        "German"
+      ],
+      "thumbImg": [
+        "images/hercule.png",
+        "images/hercule.png",
+        "images/hercule.png",
+        "images/hercule.png"
+      ]
     },
     {
       "id": 15,
       "title": "Modern Art In Cold War Beirut",
       "author": "Rogers, Sarah",
       "price": 800000,
-      "img": "images/modern art.png"
+      "img": "images/modern art.png",
+      "category": [
+        "Arts & Photography"
+      ],
+      "language": [
+        "Polish"
+      ],
+      "thumbImg": [
+        "images/modern art.png",
+        "images/modern art.png",
+        "images/modern art.png",
+        "images/modern art.png"
+      ]
     },
     {
       "id": 16,
       "title": "Jocelyne Khoueiry",
       "author": "Rogers, Sarah",
       "price": 800000,
-      "img": "images/jocelyne.png"
+      "img": "images/jocelyne.png",
+      "category": [
+        "Biography",
+        "Historical Fiction"
+      ],
+      "language": [
+        "Spanish",
+        "German",
+        "French",
+        "Polish"
+      ],
+      "thumbImg": [
+        "images/jocelyne.png",
+        "images/jocelyne.png",
+        "images/jocelyne.png",
+        "images/jocelyne.png"
+      ]
     }
   ],
-  "cart": [
-    {
-      "title": "Modern Art In Cold War Beirut",
-      "author": "Rogers, Sarah",
-      "img": "images/modern art.png",
-      "price": 800000,
-      "qty": 1,
-      "id": 1
-    }
-  ],
+  "cart": [],
   "wishlist": []
 }

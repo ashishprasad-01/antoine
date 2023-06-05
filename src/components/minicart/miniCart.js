@@ -69,9 +69,12 @@ export default function MiniCart() {
             })
           }
         </div>
+
+
         <div className={mini.miniCartBottom}>
           <Link to='/cart'>View and Edit Cart</Link>
         </div>
+
       </div>
 
     </>

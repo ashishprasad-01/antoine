@@ -82,7 +82,7 @@ export default function TrendingBooks() {
               return (
                 <div className={style.card} key={item.id}>
                   <img
-                    src={item.img}
+                    src={`/${item.img}`}
                     alt={item.title}
                   />
                   <div

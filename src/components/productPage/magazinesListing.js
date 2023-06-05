@@ -20,7 +20,7 @@ export default function Magazines() {
 
   const { register, handleSubmit } = useForm();
 
-  const { category, allproducts } = useSelector((state) => state.product);
+  const { allproducts } = useSelector((state) => state.product);
 
   const dispatch = useDispatch();
 
@@ -91,43 +91,7 @@ export default function Magazines() {
   return (
     <div className={book.container}>
       <div className={book.listing}>
-        <div className={book.leftSide}>
-          <ul>
-            <p className={book.category}>Category</p>
-            {category.length > 0 &&
-              category[0].cate.map((item) => {
-                return (
-                  <li key={item.id}>
-                    <Link>{item.name}</Link>
-                  </li>
-                );
-              })}
-          </ul>
-          <ul>
-            <p className={book.category}>Language</p>
-            {category.length > 0 &&
-              category[0].language.map((item) => {
-                return (
-                  <div className={book.language}>
-                    <input type="checkbox" />
-                    <li key={item.id}>{item.language}</li>
-                  </div>
-                );
-              })}
-          </ul>
-          <ul>
-            <p className={book.category}>Format</p>
-            {category.length > 0 &&
-              category[0].format.map((item) => {
-                return (
-                  <div className={book.language}>
-                    <input type="checkbox" />
-                    <li key={item.id}>{item.format}</li>
-                  </div>
-                );
-              })}
-          </ul>
-        </div>
+        
         <div className={book.rightSide}>
           <div className={book.topLeft}>
             <p>Books</p>
