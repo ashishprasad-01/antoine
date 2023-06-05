@@ -139,7 +139,7 @@
 }
 
 .loginButton button:last-child {
-    max-width: 320px;
+    /* max-width: 320px; */
     width: 100%;
     background: #FFFFFF 0% 0% no-repeat padding-box;
     border: 2px solid #333F48;
@@ -281,19 +281,15 @@
     }
 
     .loginButton button {
-        max-width: 345px;
+        max-width: none;
         width: 100%;
-    }
-
-    .loginButton button:last-child {
-        max-width: 345px;
-        
     }
 
     .item {
         flex-direction: column;
         gap: 15px;
     }
+    
     .desktopDetailContainer{
         display: none;
     }

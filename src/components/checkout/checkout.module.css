@@ -742,4 +742,8 @@
   .paymentFormFeild input {
     padding: 10px 10px;
   }
+
+  .selectContainer{
+    gap: 10px;
+  }
 }
