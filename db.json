@@ -779,6 +779,15 @@
       ]
     }
   ],
-  "cart": [],
+  "cart": [
+    {
+      "title": "Guardians Of Time Lost",
+      "author": "Montardre Helene",
+      "img": "images/guardians.png",
+      "price": 22700,
+      "qty": 1,
+      "id": 1
+    }
+  ],
   "wishlist": []
 }

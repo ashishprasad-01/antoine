@@ -15,7 +15,7 @@ export default function FooterMiddle({ navCategories, aboutus, service }) {
           </div>
           {
             navCategories && navCategories?.map((item, index) => {
-              return <li key={index}><Link>{item}</Link></li>
+              return <li key={index} className={style.items}><Link>{item}</Link></li>
             })
           }
         </ul>
@@ -25,7 +25,7 @@ export default function FooterMiddle({ navCategories, aboutus, service }) {
           </div>
           {
             aboutus && aboutus?.map((item, index) => {
-              return <li key={index}><Link>{item}</Link></li>
+              return <li key={index} className={style.items}><Link>{item}</Link></li>
             })
           }
         </ul>
@@ -35,7 +35,7 @@ export default function FooterMiddle({ navCategories, aboutus, service }) {
           </div>
           {
             service && service?.map((item, index) => {
-              return <li key={index}><Link>{item}</Link></li>
+              return <li key={index} className={style.items}><Link>{item}</Link></li>
             })
           }
         </ul>
