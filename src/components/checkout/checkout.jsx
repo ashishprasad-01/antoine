@@ -13,7 +13,7 @@ const Checkout = () => {
 
   return (
     <>
-      <div className={style.Container}>
+      <div className={style.container}>
         <div className={chkheader.CheckoutWrapper}>
           <div className={chkheader.CheckoutTitle}>
             <strong>Checkout</strong>

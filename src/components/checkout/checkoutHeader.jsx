@@ -1,16 +1,16 @@
 import React from 'react'
 
 import chkheader from './checkout.module.css'
-import style from '../../assests/css/header.module.css'
+// import style from '../../assests/css/header.module.css'
 
 const CheckoutHeader = () => {
     return (
         <div>
             <div className={chkheader.topHeader}></div>
             <div className={chkheader.middleHeader}>
-                <div className={style.Container}>
+                <div className={chkheader.Container}>
                     <div id={chkheader.logoWrapper}>
-                        <div className={style.middleHeaderLogo} id={chkheader.logo}>
+                        <div className={chkheader.middleHeaderLogo} id={chkheader.logo}>
                             <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 85 70">
                                 <g id="AA-logo" transform="translate(-214.748 -334.386)">
                                     <path id="Path_5374" data-name="Path 5374" d="M289.7,379.315l-17.048-44.929H262.365L245.06,379.315h10.152l2.883-8.057c5.236-6.59,10.725,2.871,18.4,0l2.8,8.057Zm-28.29-17.369,5.939-16.486h.13l5.748,16.486Z" transform="translate(-12.586)" />
