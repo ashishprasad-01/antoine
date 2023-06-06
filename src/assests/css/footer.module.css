@@ -141,6 +141,7 @@
   padding-left: 10px;
   color: #72797e;
   border: none;
+  outline: none;
 }
 
 .email button {
