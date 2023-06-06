@@ -93,6 +93,7 @@ export default function Right() {
       <div className={book.rightSide}>
         <div className={book.topLeft}>
           <p>Books</p>
+          {/* <span>{records} of {allproducts.length}</span> */}
           <div className={book.topRight}>
             <form onChange={handleSubmit(submit)}>
               <select {...register("sortProducts")} defaultValue={"name_a_z"}>
