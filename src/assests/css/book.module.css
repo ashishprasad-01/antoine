@@ -434,6 +434,7 @@ hr {
 
   .productListing {
     justify-content: center;
+    gap: 0;
   }
 
   .pageNumber{
