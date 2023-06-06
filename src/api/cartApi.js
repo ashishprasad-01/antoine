@@ -13,7 +13,6 @@ export const deleteItemFromCart = (id) => {
 }
 
 export const updateCartItem = (id, qty) => {
-    console.log(id, qty, 'api');
     return axios.patch(
         path.cartEditApi(id),
         { qty },

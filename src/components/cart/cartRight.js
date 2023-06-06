@@ -7,15 +7,20 @@ import { path } from '../../constants/path'
 export default function CartRight() {
     let [toggle, setToggle] = useState(true)
     const { country } = useSelector((state) => state.navigation)
+    const {cartItem} = useSelector((state) => state.cart)
     const [state, setState] = useState([])
-
-
+    let subTotal = 0
+    let shippingCharges = 40000
+    let tax = 20000
     const handleCountry = (e) => {
         const getCountryid = e.target.value
         console.log(getCountryid);
         const getState = country.find(country => country.id === parseInt(getCountryid))
         setState(getState.states)
     }
+
+    let Total = cartItem.map((item) => subTotal+= item.qty * item.price)
+     Total = subTotal + shippingCharges + tax
 
     return (
         <>
@@ -69,21 +74,21 @@ export default function CartRight() {
                 <div className={cart.subTotalContainer}>
                     <div className={cart.subTotal}>
                         <p>sub total</p>
-                        <p>LBP 400,000</p>
+                        <p>LBP {subTotal}</p>
                     </div>
                     <div className={cart.subTotal}>
                         <p>Total Shipping Charges</p>
-                        <p>LBP 400,000</p>
+                        <p>LBP {shippingCharges}</p>
                     </div>
                     <div className={cart.subTotal}>
                         <p>Tax</p>
-                        <p>LBP 400,000</p>
+                        <p>LBP {tax}</p>
                     </div>
                 </div>
 
                 <div className={cart.orderTotal}>
                     <p>Order Total</p>
-                    <p>LBP 1,140,000</p>
+                    <p>LBP {Total}</p>
                 </div>
 
                 <div className={cart.checkoutBtn}>

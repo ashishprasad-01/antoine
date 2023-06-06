@@ -12,10 +12,11 @@ const cartSlice = createSlice({
     initialState,
     reducers: {
         calculateSubTotal: (state) => {
-            state.subTotal = 0;
-            state.cartItem.forEach((item) => {
-                state.subTotal += item.price * item.qty;
-            });
+            if(state.cartItem){
+                state.cartItem.forEach((item) => {
+                    state.subTotal += item.price * item.qty;
+                });
+            }
         },
 
     },
@@ -44,7 +45,6 @@ const cartSlice = createSlice({
 
             .addCase(incDecQuantity.fulfilled, (state, action) => {
                 const qty = action.payload.qty
-                console.log(qty);
                 state.cartItem = state.cartItem.map((item) => {
                   if (item.id === action.payload.id) {
                     return { ...item, qty: qty };
@@ -55,4 +55,5 @@ const cartSlice = createSlice({
     }
 })
 
+export const{calculateSubTotal} = cartSlice.actions
 export default cartSlice.reducer

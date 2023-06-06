@@ -12,6 +12,7 @@ export default function Cart() {
     useEffect(() => {
         dispatch(getCart())
         dispatch(getHeaderCountry())
+        
     }, [dispatch])
 
     return (
@@ -33,7 +34,7 @@ export default function Cart() {
                     cartItem.length > 0 ?   
                     <>
                         <CartLeft cartItem = {cartItem}/>                    
-                        <CartRight />
+                        <CartRight/>
                     </>:<><h3>No items in cart</h3></>
                 }
                 
