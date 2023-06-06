@@ -1,12 +1,15 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import book from "../../../assests/css/book.module.css";
-import { filterByLanguage, filterCategory } from "../../../store/slices/listingSlice";
+import {
+  filterByLanguage,
+  filterCategory,
+} from "../../../store/slices/listingSlice";
 // import { NavLink as Link } from "react-router-dom";
 
 export default function Left() {
   const { category } = useSelector((state) => state.product);
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   return (
     <>
@@ -16,7 +19,14 @@ export default function Left() {
           {category.length > 0 &&
             category[0].cate.map((item) => {
               return (
-                <li className={book.items} key={item.id} onClick={()=> dispatch(filterCategory(item.name))}>
+                <li
+                  className={book.items}
+                  key={item.id}
+                  onClick={() => {
+                    dispatch(filterCategory(item.name));
+                    console.log(item.name);
+                  }}
+                >
                   {item.name}
                 </li>
               );
@@ -27,7 +37,11 @@ export default function Left() {
           {category.length > 0 &&
             category[0].language.map((item) => {
               return (
-                <form   onClick={()=>dispatch(filterByLanguage(item.language))} className={book.language} key={item.id}>
+                <form
+                  onClick={() => dispatch(filterByLanguage(item.language))}
+                  className={book.language}
+                  key={item.id}
+                >
                   <input type="checkbox" />
                   <li key={item.id}>{item.language}</li>
                 </form>

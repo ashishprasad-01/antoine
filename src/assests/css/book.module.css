@@ -130,7 +130,7 @@ hr {
 .productListing {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  gap: 10px;
 }
 
 .card {
@@ -298,12 +298,14 @@ hr {
   border: 1px solid lightgray;
   color: black;
   padding: 10px 20px;
+  cursor: pointer;
 }
 
 .pageNumber a{
   text-decoration: none;
   color: black;
   font-weight: 600;
+  cursor: pointer;
 }
 
 .active{
