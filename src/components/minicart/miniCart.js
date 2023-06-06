@@ -37,7 +37,7 @@ export default function MiniCart() {
               return (
                 <>
                   <div className={mini.miniCartMiddleCard} key={item.id}>
-                    <img src={item.img} alt={item.title} />
+                    <img src={`/${item.img}`} alt={item.title} />
 
                     <div className={mini.miniCartMiddleDesc}>
                       <span>{item.title}</span>
