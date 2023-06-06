@@ -16,7 +16,7 @@ import {
 } from "../../../store/slices/listingSlice";
 
 export default function Right() {
-  const notify = () => toast.error("Product Added to Cart");
+  const notify = () => toast.success("Product Added to Cart");
 
   const { register, handleSubmit } = useForm();
 
