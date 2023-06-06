@@ -34,6 +34,8 @@ export default function Right() {
   const page = Math.ceil(allproducts.length / recordsPerPage);
   const numbers = [...Array(page + 1).keys()].slice(1);
 
+  console.log(records);
+
   const addToCart = async (title, author, img, price) => {
     let { data } = await axios.post(
       `${process.env.REACT_APP_API_BASE_URL}/cart`,
@@ -92,8 +94,8 @@ export default function Right() {
     <>
       <div className={book.rightSide}>
         <div className={book.topLeft}>
-          <p>Books</p>
-          {/* <span>{records} of {allproducts.length}</span> */}
+          <p>Books<span>{records.length} of {allproducts.length}</span></p>
+          
           <div className={book.topRight}>
             <form onChange={handleSubmit(submit)}>
               <select {...register("sortProducts")} defaultValue={"name_a_z"}>
@@ -238,7 +240,7 @@ export default function Right() {
                     }`}
                   >
                     <Link to={`/product/${item.id}`}>
-                      <h3 className={book.title}>{item.title}</h3>
+                      <p className={book.title}>{item.title}</p>
                       <p className={book.author}>{item.author}</p>
 
                       {view === 0 ? (
