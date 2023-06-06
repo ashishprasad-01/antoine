@@ -9,6 +9,7 @@ export default function HeaderBottom({ navCategories }) {
 
   const { category } = useSelector((state) => state.product)
   const dispatch = useDispatch()
+  // eslint-disable-next-line no-unused-vars
   let [state, setState] = useState(false)
 
   useEffect(() => {

@@ -226,8 +226,9 @@ export default function HamburgerMenu({ toggle }) {
                             onClick={() => toggle()}
                             key={index}
                             className={header.sideNavList}
-                          >
-                            <Link to={path.magazineListing}>{navItem}</Link>
+                            >
+                            {/* <Link to={path.magazineListing}>{navItem}</Link> */}
+                            {navItem}
                             <svg
                               onClick={() => {
                                 setArrow(!arrow);

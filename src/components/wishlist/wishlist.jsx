@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteWishlistItem, getWishlist } from "../../store/actions/wishlistActios";
 import style from "./wishlist.module.css";
-import { NavLink as Link } from "react-router-dom";
+// import { NavLink as Link } from "react-router-dom";
 import axios from "axios";
 import { toast } from "react-hot-toast";
 import { useState } from "react";
