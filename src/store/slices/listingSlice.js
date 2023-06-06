@@ -27,6 +27,7 @@ const listingSlice = createSlice({
     },
 
     sortProductsByPrice: (state, action) => {
+      // console.log(state.allproducts)
       if (action.payload) {
         sortByPrice(state.allproducts, action.payload);
       } else {
@@ -36,9 +37,7 @@ const listingSlice = createSlice({
 
     filterCategory: (state, action) => {
       let category = action.payload;
-
       state.allproducts = state.productsByCategory;
-
       let data = state.productsByCategory.filter((x) => {
         return x.category.find(
           (ele) => ele.toLowerCase() === category.toLowerCase()
@@ -48,15 +47,13 @@ const listingSlice = createSlice({
     },
 
     filterByLanguage: (state, action) => {
-
       let language = action.payload;
-
+      console.log(language);
       let data = state.productsByCategory.filter((x) => {
         return x.language.find(
           (ele) => ele.toLowerCase() === language.toLowerCase()
         );
       });
-
       state.allproducts = data
     },
   },

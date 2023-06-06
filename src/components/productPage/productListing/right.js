@@ -286,7 +286,7 @@ export default function Right() {
                 </div>
               );
             })}
-        </div>:<strong>No Products are available</strong>
+        </div>:<h2 style={{marginTop :'20px'}}>No Products are available</h2>
         }
         
 
