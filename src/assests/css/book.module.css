@@ -134,6 +134,15 @@ hr {
   outline: none;
 }
 
+.wishlist{
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  background: #FFFFFF;
+  padding: 3px 6px;
+  border-radius: 100%;
+}
+
 /* Grid View  */
 
 .productListing {
@@ -145,6 +154,7 @@ hr {
 .card {
   animation: fade-in 0.5s ease-in-out;
 }
+
 @keyframes fade-in {
   from { opacity: 0; }
   to { opacity: 1; }
@@ -159,6 +169,7 @@ hr {
   height: 440px;
   margin: 20px 0;
   padding: 10px 0;
+  position: relative;
 }
 
 .card img {
@@ -232,6 +243,12 @@ hr {
   border-bottom: 1px solid #eeeeee;
   align-items: flex-start;
   cursor: pointer;
+}
+
+.cardColumn .wishlistColumn{
+  top: 15px;
+  left: 140px;
+  right: auto;
 }
 
 .cardColumn a {
@@ -351,6 +368,18 @@ hr {
     justify-content: center;
     box-shadow: none;
     background: none;
+  }
+
+  .wishlist{
+    top: 12px;
+    right: 4px;
+    padding: 4px 5px 1px;
+  }
+
+  .cardColumn .wishlistColumn{
+    top: 15px;
+    left: 122px;
+    right: auto;
   }
 
   .card:hover {
