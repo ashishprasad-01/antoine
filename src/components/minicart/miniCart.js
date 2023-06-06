@@ -6,6 +6,7 @@ import { useEffect } from 'react'
 import { getCart } from '../../store/actions/cartActions'
 import { deleteCartItem } from '../../store/actions/cartActions'
 import { toast } from 'react-hot-toast'
+import { path } from '../../constants/path'
 
 export default function MiniCart() {
   const { cartItem } = useSelector((state) => state.cart)
@@ -25,11 +26,13 @@ export default function MiniCart() {
             <p><span>{cartItem.length}</span> Items In Cart</p>
             <p>Cart SubTotal:<br /><span>LBP 100000</span></p>
           </div>
+          <Link to={path.checkOut}>
           <button>
             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="16" viewBox="0 0 15 20">
               <path id="Path_1818" data-name="Path 1818" d="M78.583,7.5h-1.25V5.833a5.833,5.833,0,0,0-11.667,0V7.5h-1.25A.416.416,0,0,0,64,7.917V18.333A1.668,1.668,0,0,0,65.667,20H77.333A1.668,1.668,0,0,0,79,18.333V7.917A.416.416,0,0,0,78.583,7.5Zm-5.836,8.7a.417.417,0,0,1-.414.463H70.667a.417.417,0,0,1-.414-.463l.263-2.364a1.648,1.648,0,0,1-.682-1.34,1.667,1.667,0,0,1,3.333,0,1.648,1.648,0,0,1-.682,1.34Zm2.086-8.7H68.167V5.833a3.333,3.333,0,0,1,6.667,0Z" transform="translate(-64)" fill="#fff" />
             </svg> Proceed To Checkout
           </button>
+          </Link>
         </div>
         <div className={mini.miniCartMiddle}>
           {

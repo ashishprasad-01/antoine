@@ -179,6 +179,10 @@
   position: relative;
 }
 
+.cart svg{
+  cursor: pointer;
+}
+
 .cartCount {
   background: #333f48;
   position: absolute;

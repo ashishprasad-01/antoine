@@ -318,7 +318,7 @@
 
     .bannerContainer {
         margin: 0px 20px;
-        padding-bottom: 0px;
+        padding: 0px;
     }
 
     .card:hover {
@@ -327,4 +327,6 @@
         cursor: pointer;
         outline: none;
     }
+
+
 }

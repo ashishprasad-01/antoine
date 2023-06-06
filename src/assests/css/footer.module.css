@@ -1,210 +1,213 @@
 .container {
-    max-width: 1280px;
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
 }
 
-.containerDesktop{
-    max-width: 1280px;
-    width: 100%;
-    margin: 0 auto;
+.containerDesktop {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
 }
 
-.containerMobile{
-    max-width: 1280px;
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
-    display: none;
+.containerMobile {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  display: none;
 }
-
 
 /* Top Footer */
 
 .footerTop {
-    background: #EEEEEE 0% 0% no-repeat padding-box;
-    opacity: 1;
-    height: 128px;
-    display: flex;
-    align-items: center;
+  background: #eeeeee 0% 0% no-repeat padding-box;
+  opacity: 1;
+  height: 128px;
+  display: flex;
+  align-items: center;
 }
 
 .topFooterLink {
-    display: flex;
-    justify-content: space-between;
-    text-align: left;
-    /* padding: 0px 20px; */
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  /* padding: 0px 20px; */
+  flex-wrap: wrap;
 }
 
 .topFooterLink li {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .topFooterLink li a {
-    font: normal normal bold 20px Inter;
-    letter-spacing: 0px;
-    color: #333F48;
-    text-decoration: none;
+  font: normal normal bold 20px Inter;
+  letter-spacing: 0px;
+  color: #333f48;
+  text-decoration: none;
 }
 
 .middleFooter {
-    display: flex;
-    padding: 20px 0;
-    text-align: left;
-    border-bottom: 1px solid #EEEEEE;
-    gap: 20px;
+  display: flex;
+  padding: 20px 0;
+  text-align: left;
+  border-bottom: 1px solid #eeeeee;
 }
 
-.categories{
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
+.categories {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .category {
-    font-size: 16px;
-    line-height: 20px;
-    font-weight: bold;
-    color: #333F48;
-    text-align: left;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: bold;
+  color: #333f48;
+  text-align: left;
 }
 
 .categories a {
-    text-decoration: none;
-    font-style: normal;
-    font-size: 14px;
-    line-height: 28px;
-    color: #333F48;
+  text-decoration: none;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 28px;
+  color: #333f48;
 }
 
-.items a:hover{
-    color: #000000;
-    font-weight:500;
+.items a:hover {
+  color: #000000;
+  font-weight: 500;
 }
 
 .text {
-    display: flex;
-    align-items: center;
-    font-size: 16px;
-    line-height: 20px;
-    font-weight: bold;
-    color: #333F48;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: bold;
+  color: #333f48;
+  justify-content: space-between;
+}
 
+.ddnotActive{
+    transform: rotate(360deg);
+    transition-duration: 0.5s;
+}
+
+.ddactive{
+    transform: rotate(180deg);
+    transition-duration: 0.5s;
+}
+
+.item{
+    height: auto;
 }
 
 .email {
-    display: flex;
-    background: #FFFFFF 0% 0% no-repeat padding-box;
-    margin-top: 10px;
-    border: 1px solid #333F48;
+  display: flex;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  margin-top: 10px;
+  border: 1px solid #333f48;
 }
 
-.email svg{
-    height: 14px;
-    width: 14px;
-    fill: #FFFFFF;
+.email svg {
+  height: 14px;
+  width: 14px;
+  fill: #ffffff;
 }
 
 .email input {
-    width: 100%;
-    height: 48px;
-    font-size: 14px;
-    line-height: 17px;
-    padding-left: 10px;
-    color: #72797E;
-    border: none;
+  width: 100%;
+  height: 48px;
+  font-size: 14px;
+  line-height: 17px;
+  padding-left: 10px;
+  color: #72797e;
+  border: none;
 }
 
 .email button {
-    border: none;
-    background: #333F48 0% 0% no-repeat padding-box;
-    color: #FFFFFF;
-    height: 48px;
-    width: 48px;
+  border: none;
+  background: #333f48 0% 0% no-repeat padding-box;
+  color: #ffffff;
+  height: 48px;
+  width: 48px;
 }
 
 .email button svg {
-    height: 20px;
-    width: 20px;
-    padding-top: 5px;
+  height: 20px;
+  width: 20px;
+  padding-top: 5px;
 }
-
 
 .bottomFooter {
-    text-align: center;
-    font: normal normal normal 14px/20px Inter;
-    letter-spacing: 0px;
-    color: #72797E;
-    text-transform: capitalize;
-    padding: 20px 0px;
-    width: 100%;
+  text-align: center;
+  font: normal normal normal 14px/20px Inter;
+  letter-spacing: 0px;
+  color: #72797e;
+  text-transform: capitalize;
+  padding: 20px 0px;
+  width: 100%;
 }
 
-#bottomFooterTxt{
-    margin: 10px 5px;
-    display: flex;
+#bottomFooterTxt {
+  margin: 10px 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (max-width: 767px) {
+  .containerDesktop {
+    display: none;
+  }
+
+  .footerTop {
+    height: auto;
+  }
+
+  .topFooterLink {
+    flex-wrap: wrap;
+    gap: 20px;
+    color: #000000;
+    padding: 30px;
+  }
+
+  .topFooterLink li {
+    gap: 20px;
+    padding: 10px 10px;
+  }
+
+  .middleFooter {
     flex-direction: column;
-}
+  }
 
+  .categories {
+    padding: 15px 25px;
+    line-height: normal;
+    border-bottom: 1px solid lightgrey;
+  }
 
+  .categories a {
+    font-size: 16px;
+    color: #000000;
+  }
 
-@media only screen and (max-width:767px) {
+  .category {
+    font: normal normal bold 16px/20px Inter;
+    color: #000000;
+    text-align: left;
+  }
 
-    .containerDesktop{
-        display: none;
-    }
+  .subs {
+    margin: 20px 15px;
+  }
 
-    .footerTop {
-        height: auto;
-    }
-
-    .topFooterLink {
-        flex-wrap: wrap;
-        gap: 20px;
-        color: #000000;
-        padding: 30px;
-    }
-
-    .topFooterLink li {
-        gap: 20px;
-        padding: 10px 10px;
-    }
-
-    .middleFooter {
-        flex-direction: column;
-    }
-
-    .categories{
-        padding: 15px;
-        line-height: normal;
-        border-bottom: 1px solid lightgrey;
-    }
-
-    .categories a {
-        font-size: 16px;
-        color: #000000;
-    }
-
-    .category {
-        font: normal normal bold 16px/20px Inter;
-        color: #000000;
-        text-align: left;
-    }
-
-    .subs {
-        margin: 20px 15px;
-    }
-
-    .text {
-        margin-bottom: 10px ;
-    }
-
-    .containerMobile{
-        display: block;
-    }
+  .containerMobile {
+    display: block;
+  }
 }

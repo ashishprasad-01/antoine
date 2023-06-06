@@ -7,15 +7,11 @@ import MobileFooter from './mobileFooter';
 
 export default function FooterMain() {
 
-  // const footer  = useSelector((state) => state.navigation)
+
   const { navCategories, footer, aboutus, service } = useSelector((state) => state.navigation)
   const dispatch = useDispatch()
 
-  // console.log(service);
-
-
   useEffect(() => {
-    // dispatch(getFooter())
     dispatch(getHeaderNav())
     dispatch(getAboutus())
     dispatch(getService())
