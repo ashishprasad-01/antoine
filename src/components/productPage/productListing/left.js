@@ -14,7 +14,7 @@ export default function Left() {
   return (
     <>
       <div className={book.leftSide}>
-        <ul>
+        <ul className={book.item}>
           <p className={book.category}>Category</p>
           {category.length > 0 &&
             category[0].cate.map((item) => {
@@ -32,7 +32,7 @@ export default function Left() {
               );
             })}
         </ul>
-        <ul>
+        <ul className={book.item}>
           <p className={book.category}>Language</p>
           {category.length > 0 &&
             category[0].language.map((item) => {
@@ -48,7 +48,7 @@ export default function Left() {
               );
             })}
         </ul>
-        <ul>
+        <ul className={book.item}>
           <p className={book.category}>Format</p>
           {category.length > 0 &&
             category[0].format.map((item) => {

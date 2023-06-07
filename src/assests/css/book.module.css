@@ -28,7 +28,8 @@ hr {
   color: #000000;
 }
 
-.leftSide ul {
+
+.leftSide .item {
   text-align: left;
   font: normal normal normal 12px/24px Inter;
   color: #333f48;
@@ -44,7 +45,7 @@ hr {
   color: red;
 }
 
-.leftSide ul:last-child {
+.leftSide .item:last-child {
   border: none;
 }
 
@@ -325,7 +326,7 @@ hr {
 .pageNumber{
   border: 1px solid lightgray;
   color: black;
-  padding: 10px 20px;
+  padding: 10px 0px;
   cursor: pointer;
 }
 
@@ -473,7 +474,7 @@ hr {
   }
 
   .productListing {
-    justify-content: center;
+    justify-content: space-evenly;
     gap: 0;
   }
 
