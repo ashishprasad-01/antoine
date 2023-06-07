@@ -15,7 +15,7 @@
 }
 
 .deal {
-    padding: 40px 30px;
+    padding: 40px 15px;
     border-bottom: 1px solid #EEEEEE;
 }
 
@@ -36,7 +36,7 @@
     padding: 0 25px;
 }
 .trendingBooks {
-    padding: 0px 30px 20px;
+    padding: 0px 15px 20px;
     border-bottom: 1px solid #EEEEEE;
     margin-bottom: 10px;
 }
@@ -224,7 +224,7 @@
     .card {
         width: 140px !important;
         height: 350px;
-        margin-left: 10px;
+        margin-left: 15px;
     }
 
     .wishlist{
