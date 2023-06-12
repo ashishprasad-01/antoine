@@ -7,6 +7,7 @@ import ChekoutLeft from './chekoutLeft'
 import CheckoutRight from './checkoutRight'
 import PaymentLeft from './paymentLeft'
 import PaymentRightSide from './paymentRightSide'
+import { t } from 'i18next'
 
 const Checkout = () => {
   const [progressbar, setProgressBar] = useState(true)
@@ -16,7 +17,7 @@ const Checkout = () => {
       <div className={style.container}>
         <div className={chkheader.CheckoutWrapper}>
           <div className={chkheader.CheckoutTitle}>
-            <strong>Checkout</strong>
+            <strong>{t("Checkout")}</strong>
           </div>
 
           <div className={chkheader.progressbarContainer}>

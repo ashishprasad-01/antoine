@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import style from '../../assests/css/detail.module.css'
 import DescriptionPage from './descriptionPage'
 import ReviewPage from './reviewPage'
+import { t } from 'i18next'
 
 export default function MobileProductDesc() {
     let [expanded, setExpanded] = useState(0)
@@ -13,7 +14,7 @@ export default function MobileProductDesc() {
                     <ul className={style.items}>
                         <li className={style.item} onClick={() => { expanded !== 1 ? setExpanded(1) : setExpanded(0) }}>
                             <div id={style.item}>
-                                Product Description
+                                {t("Product Description")}
                                 {
                                     expanded !== 1 ? <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
                                         <title>plus</title>

@@ -23,14 +23,12 @@ hr {
 }
 
 .category {
-  text-align: left;
   font: normal normal bold 13px/20px Inter;
   color: #000000;
 }
 
 
 .leftSide .item {
-  text-align: left;
   font: normal normal normal 12px/24px Inter;
   color: #333f48;
   border-bottom: 1px solid #eeeeee;

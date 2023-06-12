@@ -7,6 +7,7 @@ import { getCart, incDecQuantity } from "../../store/actions/cartActions";
 import { deleteCartItem } from "../../store/actions/cartActions";
 import { toast } from "react-hot-toast";
 import { path } from "../../constants/path";
+import { t } from "i18next";
 
 export default function MiniCart() {
   const { cartItem } = useSelector((state) => state.cart);
@@ -34,10 +35,10 @@ export default function MiniCart() {
         <div className={mini.miniCartTop}>
           <div className={mini.miniCartTopTotal}>
             <p>
-              <span>{cartItem.length}</span> Items In Cart
+              <span>{cartItem.length}</span> {t("Items In Cart")}
             </p>
             <p>
-              Cart SubTotal:
+              {t("Cart SubTotal")}:
               <br />
               <span>LBP {subTotal}</span>
             </p>
@@ -58,7 +59,7 @@ export default function MiniCart() {
                   fill="#fff"
                 />
               </svg>{" "}
-              Proceed To Checkout
+              {t("Proceed To Checkout")}
             </button>
           </Link>
         </div>
@@ -70,8 +71,8 @@ export default function MiniCart() {
                     <img src={`/${item.img}`} alt={item.title} />
 
                     <div className={mini.miniCartMiddleDesc}>
-                      <span>{item.title}</span>
-                      <span>{item.author}</span>
+                      <span>{t(item.title)}</span>
+                      <span>{t(item.author)}</span>
                       <span>LBP {item.price}</span>
                       <div className={mini.miniCartQty}>
                         <div className={mini.miniCartQtyButton}>

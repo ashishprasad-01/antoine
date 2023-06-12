@@ -7,7 +7,7 @@
   height: 5px;
 }
 
-.Container{
+.Container {
   max-width: 1280px;
   margin: 0 auto;
 }
@@ -79,7 +79,7 @@
   background-color: #00838c;
 }
 
-.svgLine::before{
+.svgLine::before {
   border-radius: 10px;
 }
 
@@ -116,7 +116,6 @@
   width: 100%;
 }
 
-
 .addressIsActive {
   border: 1px solid #333f48;
 }
@@ -127,14 +126,14 @@
   position: relative;
 }
 
-.addressIsActive input{
-    position: absolute;
-    top: -21px;
-    right: -21px;
-    border: none;
-    accent-color: #333F48;
-    width: 30px;
-    height: 30px;
+.addressIsActive input {
+  position: absolute;
+  top: -21px;
+  right: -21px;
+  border: none;
+  accent-color: #333f48;
+  width: 30px;
+  height: 30px;
 }
 
 .addressTitle {
@@ -514,8 +513,8 @@
 }
 
 .PaymentFormBody {
-    max-width: 700px;
-    width: 100%;
+  max-width: 700px;
+  width: 100%;
   padding: 15px 20px;
 }
 
@@ -553,15 +552,13 @@
   outline: none;
 }
 
-.selectContainer{
-    display: flex;
-    justify-content: space-between;
-
+.selectContainer {
+  display: flex;
+  gap: 30px;
 }
 
 .selectContainer select {
-    max-width: 260px;
-    width: 100%;
+  width: 100%;
 }
 
 #cardVeify {
@@ -644,7 +641,10 @@
   position: absolute;
   background-color: white;
 }
-
+[dir="rtl"] .checkoutRightContainer {
+  margin-left: 0;
+  margin-right: 30px;
+}
 /* Media Query */
 
 @media screen and (max-width: 767px) {
@@ -749,7 +749,7 @@
     padding: 10px 10px;
   }
 
-  .selectContainer{
+  .selectContainer {
     gap: 10px;
   }
 }

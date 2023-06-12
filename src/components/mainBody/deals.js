@@ -9,7 +9,7 @@ import { t } from 'i18next';
 export default function Deals({ deals }) {
     const settings = {
         dots: false,
-        infinite: true,
+        infinite: false,
         speed: 500,
         slidesToShow: 7,
         slidesToScroll: 1,
@@ -19,7 +19,7 @@ export default function Deals({ deals }) {
                 breakpoint: 1024,
                 settings: {
                     slidesToShow: 3,
-                    slidesToScroll: 3,
+                    slidesToScroll: 1,
                 }
             },
             {

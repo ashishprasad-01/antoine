@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux'
 import cart from './cart.module.css'
 import { NavLink as Link } from 'react-router-dom'
 import { path } from '../../constants/path'
+import { t } from 'i18next'
 
 export default function CartRight() {
     let [toggle, setToggle] = useState(true)
@@ -26,10 +27,10 @@ export default function CartRight() {
         <>
             <div className={cart.rightCartContainer}>
                 {/* <div> */}
-                <p>Summary</p>
+                <p>{t("Summary")}</p>
                 {/* </div> */}
                 <div className={cart.address} onClick={() => { setToggle(!toggle) }}>
-                    <span>Estimate Shipping Charges and Tax</span>
+                    <span>{t("Estimate Shipping Charges and Tax")}</span>
                     <div>
                         {
                             !toggle ? <svg xmlns="http://www.w3.org/2000/svg" width="12" height="7" viewBox="0 0 12 7">
@@ -46,19 +47,19 @@ export default function CartRight() {
                     toggle ?
                         <div className={cart.country}>
 
-                            <label>Country</label>
+                            <label>{t("Country")}</label>
                             <select onChange={(e) => handleCountry(e)}>
-                                <option>--- Select Country---</option>
+                                <option>--- {t("Select")}{t("Country")} ---</option>
                                 {
                                     country && country?.map((item, index) => {
-                                        return <option key={index} value={item.id}>{item.country}</option>
+                                        return <option key={index} value={item.id}>{t(item.country)}</option>
                                     })
                                 }
                             </select>
 
-                            <label>State/province</label>
+                            <label>{t("State")}/{t("province")}</label>
                             <select>
-                                <option>--- Select State---</option>
+                                <option>--- {t("Select")} {t("State")} ---</option>
 
                                 {
                                     state?.map((item, index) => {
@@ -67,27 +68,27 @@ export default function CartRight() {
                                 }
                             </select>
 
-                            <label>Zip/Postal Code</label>
+                            <label>{t("Zip")}/{t("Postal Code")}</label>
                             <input type='number' placeholder='Enter Postal Code'/>
                         </div> : <></>
                 }
                 <div className={cart.subTotalContainer}>
                     <div className={cart.subTotal}>
-                        <p>sub total</p>
+                        <p>{t("Sub")} {t("Total")}</p>
                         <p>LBP {subTotal}</p>
                     </div>
                     <div className={cart.subTotal}>
-                        <p>Total Shipping Charges</p>
+                        <p>{t("Total")} {t("Shipping")} {t("Charges")}</p>
                         <p>LBP {shippingCharges}</p>
                     </div>
                     <div className={cart.subTotal}>
-                        <p>Tax</p>
+                        <p>{t("Tax")}</p>
                         <p>LBP {tax}</p>
                     </div>
                 </div>
 
                 <div className={cart.orderTotal}>
-                    <p>Order Total</p>
+                    <p>{t("Order")} {t("Total")}</p>
                     <p>LBP {Total}</p>
                 </div>
 
@@ -96,7 +97,7 @@ export default function CartRight() {
                     <button>
                         <svg xmlns="http://www.w3.org/2000/svg" width="15" height="20" viewBox="0 0 15 20">
                             <path id="Path_1818" data-name="Path 1818" d="M78.583,7.5h-1.25V5.833a5.833,5.833,0,0,0-11.667,0V7.5h-1.25A.416.416,0,0,0,64,7.917V18.333A1.668,1.668,0,0,0,65.667,20H77.333A1.668,1.668,0,0,0,79,18.333V7.917A.416.416,0,0,0,78.583,7.5Zm-5.836,8.7a.417.417,0,0,1-.414.463H70.667a.417.417,0,0,1-.414-.463l.263-2.364a1.648,1.648,0,0,1-.682-1.34,1.667,1.667,0,0,1,3.333,0,1.648,1.648,0,0,1-.682,1.34Zm2.086-8.7H68.167V5.833a3.333,3.333,0,0,1,6.667,0Z" transform="translate(-64)" fill="#fff" />
-                        </svg> Proceed To Checkout
+                        </svg> {t("Proceed To Checkout")}
                     </button>
                     </Link>
                 </div>

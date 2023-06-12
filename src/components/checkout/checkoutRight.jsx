@@ -2,6 +2,7 @@ import React from 'react'
 
 import checkout from './checkout.module.css'
 import { useSelector } from 'react-redux';
+import { t } from 'i18next';
 
 const CheckoutRight = () => {
 
@@ -14,11 +15,11 @@ const CheckoutRight = () => {
                 <div className={checkout.CheckoutRightWrapper}>
                     <div className={checkout.CheckoutRightContent}>
                         <div className={checkout.CheckoutRightTitle}>
-                            <strong>Summary</strong>
+                            <strong>{t("Summary")}</strong>
                         </div>
 
                         <div className={checkout.cartItems}>
-                            <strong>{cartItem.length} Items in Cart</strong>
+                            <strong>{cartItem.length} {t("Items In Cart")}</strong>
                         </div>
 
                         <div className={checkout.CheckoutRightBody}>
@@ -32,8 +33,8 @@ const CheckoutRight = () => {
 
                                             <div className={checkout.cartItemContent}>
                                                 <div className={checkout.cartItemDetail}>
-                                                    <strong>{item.title}</strong>
-                                                    <span>{item.author}</span>
+                                                    <strong>{t(item.title)}</strong>
+                                                    <span>{t(item.author)}</span>
                                                 </div>
 
                                                 <div className={checkout.cartItemPrice}>

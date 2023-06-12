@@ -5,7 +5,6 @@
 }
 
 .heading {
-    text-align: left;
     font-size: 24px;
     font-weight: bold;
     line-height: 40px;
@@ -142,13 +141,13 @@
     flex-direction: column;
     height: 346px;
     width: 384px;
-    margin: 10px 0px;
+    margin: 15px 0px;
 }
 
 .bookList {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
     padding: 20px 0px 40px;
 }
 
@@ -203,6 +202,9 @@
     border-bottom: 1px solid #EEEEEE;
 } */
 
+[dir="rtl"] .heading{
+    margin: 40px 15px 0 0;
+  }
 
 /* responsive */
 

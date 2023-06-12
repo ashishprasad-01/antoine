@@ -40,7 +40,7 @@ export default function TrendingBooks() {
 
   var settings = {
     dots: false,
-    infinite: true,
+    infinite: false,
     speed: 500,
     slidesToShow: 5,
     slidesToScroll: 1,

@@ -433,6 +433,18 @@
   }
 }
 
+
+/* Css of right to left */
+
+[dir="rtl"] .navList:first-child{
+  border: none;
+}
+[dir="rtl"] .searchBar input{
+  padding-right: 10px;
+}
+
+
+
 /*   Responsive    */
 
 @media only screen and (max-width: 767px) {

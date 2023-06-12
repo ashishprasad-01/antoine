@@ -5,6 +5,7 @@ import { getCart } from '../../store/actions/cartActions'
 import { getHeaderCountry } from '../../store/actions/headerNavAction'
 import CartRight from './cartRight'
 import CartLeft from './cartLeft'
+import { t } from 'i18next'
 export default function Cart() {
     const { cartItem } = useSelector((state) => state.cart)
     const dispatch = useDispatch()
@@ -23,8 +24,8 @@ export default function Cart() {
 
                 {/* cart header container */}
                 <div className={cart.cartHeading}>
-                    <p>Shopping cart</p>
-                    <p>You have {cartItem.length} items in cart.</p>
+                    <p>{t("Shopping cart")}</p>
+                    <p>{t("You have")} {cartItem.length} {t("items in cart.")}</p>
                 </div>
                 <div className={cart.cartContainer}>
 
@@ -35,7 +36,7 @@ export default function Cart() {
                     <>
                         <CartLeft cartItem = {cartItem}/>                    
                         <CartRight/>
-                    </>:<><h3>No items in cart</h3></>
+                    </>:<><h3>{t("No items in cart")}</h3></>
                 }
                 
                 </div>

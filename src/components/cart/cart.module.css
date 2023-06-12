@@ -81,7 +81,7 @@ tbody {
 tbody #cartActionBtn {
     position: absolute;
     right: 0;
-    margin-top: -50px;
+    margin-top: -30px;
 }
 
 tbody td {
@@ -91,8 +91,6 @@ tbody td {
     line-height: 20px;
     color: #333F48;
     vertical-align: top;
-    padding: 15px 0;
-    /* margin: 20px; */
 }
 
 tbody td:last-child {
@@ -265,6 +263,14 @@ tbody td:last-child {
     text-transform: capitalize;
 }
 
+[dir="rtl"] tbody #cartActionBtn{
+    left: 0;
+    right: auto;
+}
+[dir="rtl"] .rightCartContainer{
+    margin-left: 0px;
+    margin-right: 50px;
+}
 /* media query responsive */
 
 @media screen and (max-width: 768px){

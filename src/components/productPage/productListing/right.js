@@ -318,7 +318,7 @@ export default function Right() {
                           />
                         </g>
                       </svg>
-                      Add to cart
+                      {t("Add To Cart")}
                     </button>
                   </div>
                 </div>
