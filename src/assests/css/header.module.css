@@ -439,8 +439,13 @@
 [dir="rtl"] .navList:first-child{
   border: none;
 }
+
 [dir="rtl"] .searchBar input{
   padding-right: 10px;
+}
+[dir="rtl"] .sideNav{
+  right: 0;
+  left: auto;
 }
 
 
