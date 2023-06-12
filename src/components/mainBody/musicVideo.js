@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import axios from "axios";
 import { path } from "../../constants/path";
 import { NavLink as Link } from "react-router-dom";
+import { t } from "i18next";
 
 export default function MusicVideo({ music }) {
   // console.log(trendingBook);
@@ -66,7 +67,7 @@ export default function MusicVideo({ music }) {
   return (
     <div className={style.container}>
       <div className={style.trendingBooks}>
-        <p className={style.heading}>Trending in Music and Video</p>
+        <p className={style.heading}>{t("Trending in Music and Video")}</p>
         <Slider {...settings}>
           {music &&
             music.length > 0 &&
@@ -93,8 +94,8 @@ export default function MusicVideo({ music }) {
                   </div>
 
                   <div className={style.desc}>
-                    <h3 className={style.title}>{item.title}</h3>
-                    <p className={style.author}>{item.author}</p>
+                    <h3 className={style.title}>{t(item.title)}</h3>
+                    <p className={style.author}>{t(item.author)}</p>
                     <p className={style.price}>LBP {item.price}</p>
                   </div>
                   <div className={style.cartBtn}>

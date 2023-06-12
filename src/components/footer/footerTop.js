@@ -1,6 +1,7 @@
 import React from 'react'
 import style from '../../assests/css/footer.module.css'
 import { NavLink as Link } from 'react-router-dom'
+import { t } from 'i18next'
 
 export default function FooterTop({ footer }) {
     return (
@@ -15,7 +16,7 @@ export default function FooterTop({ footer }) {
                                 <path id="Path_6263" data-name="Path 6263" d="M18.994,2.4H28.9a1,1,0,0,1,.991,1v25a1,1,0,0,1-.991,1H17.343a3.986,3.986,0,0,0-3.962,4,.991.991,0,1,1-1.981,0V10.067A7.639,7.639,0,0,1,18.994,2.4Zm8.915,2H18.994a5.647,5.647,0,0,0-5.613,5.667V28.932A5.888,5.888,0,0,1,17.343,27.4H27.909Z" transform="translate(6.509)" fill="#333f48" />
                             </g>
                         </svg>
-                        <Link>50000+ Books</Link>
+                        <Link>{t("50,000+ Books")}</Link>
                     </li>
                     <li>
                         <svg xmlns="http://www.w3.org/2000/svg" width="26" height="32" viewBox="0 0 26 32">
@@ -24,7 +25,7 @@ export default function FooterTop({ footer }) {
                                 <path id="Path_6263" data-name="Path 6263" d="M12.33,17.249a.9.9,0,0,1-.641-.265L8.666,13.965a.906.906,0,1,1,1.283-1.281l2.382,2.378,5.405-5.4a.906.906,0,0,1,1.283,1.281l-6.047,6.038A.9.9,0,0,1,12.33,17.249Z" transform="translate(2.558 4.075)" fill="#333f48" />
                             </g>
                         </svg>
-                        <Link>Guaranted Lowest Price</Link>
+                        <Link>{t("Guaranted Lowest Price")}</Link>
                     </li>
                     <li>
                         <svg xmlns="http://www.w3.org/2000/svg" width="29" height="32" viewBox="0 0 29 32">
@@ -34,7 +35,7 @@ export default function FooterTop({ footer }) {
                             </g>
                         </svg>
 
-                        <Link>Free Shipping</Link>
+                        <Link>{t("Free Shipping")}</Link>
                     </li>
                     <li>
                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
@@ -43,7 +44,7 @@ export default function FooterTop({ footer }) {
                             </g>
                         </svg>
 
-                        <Link>Best Customer Service</Link>
+                        <Link>{t("Best Customer Service")}</Link>
                     </li>
                 </ul>
             </div>

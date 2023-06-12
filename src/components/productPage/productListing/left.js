@@ -5,6 +5,7 @@ import {
   filterByLanguage,
   filterCategory,
 } from "../../../store/slices/listingSlice";
+import { t } from "i18next";
 // import { NavLink as Link } from "react-router-dom";
 
 export default function Left() {
@@ -15,7 +16,7 @@ export default function Left() {
     <>
       <div className={book.leftSide}>
         <ul className={book.item}>
-          <p className={book.category}>Category</p>
+          <p className={book.category}>{t("Category")}</p>
           {category.length > 0 &&
             category[0].cate.map((item) => {
               return (
@@ -24,16 +25,15 @@ export default function Left() {
                   key={item.id}
                   onClick={() => {
                     dispatch(filterCategory(item.name));
-                    console.log(item.name);
                   }}
                 >
-                  {item.name}
+                  {t(item.name)}
                 </li>
               );
             })}
         </ul>
         <ul className={book.item}>
-          <p className={book.category}>Language</p>
+          <p className={book.category}>{t("Language")}</p>
           {category.length > 0 &&
             category[0].language.map((item) => {
               return (
@@ -43,19 +43,19 @@ export default function Left() {
                   key={item.id}
                 >
                   <input type="checkbox" />
-                  <li key={item.id}>{item.language}</li>
+                  <li key={item.id}>{t(item.language)}</li>
                 </form>
               );
             })}
         </ul>
         <ul className={book.item}>
-          <p className={book.category}>Format</p>
+          <p className={book.category}>{t("Format")}</p>
           {category.length > 0 &&
             category[0].format.map((item) => {
               return (
                 <div className={book.language} key={item.id}>
                   <input type="checkbox" />
-                  <li key={item.id}>{item.format}</li>
+                  <li key={item.id}>{t(item.format)}</li>
                 </div>
               );
             })}

@@ -1,6 +1,7 @@
 import React from 'react'
 import style from '../../assests/css/footer.module.css'
 import { NavLink as Link } from 'react-router-dom'
+import { t } from 'i18next'
 
 
 export default function FooterMiddle({ navCategories, aboutus, service }) {
@@ -11,40 +12,40 @@ export default function FooterMiddle({ navCategories, aboutus, service }) {
       <div className={style.middleFooter}>
         <ul className={style.categories}>
           <div className={style.text}>
-            Categories
+            {t("Categories")}
           </div>
           {
             navCategories && navCategories?.map((item, index) => {
-              return <li key={index} className={style.items}><Link>{item}</Link></li>
+              return <li key={index} className={style.items}><Link>{t(item)}</Link></li>
             })
           }
         </ul>
         <ul className={style.categories}>
           <div className={style.text}>
-            About Us
+            {t("About Us")}
           </div>
           {
             aboutus && aboutus?.map((item, index) => {
-              return <li key={index} className={style.items}><Link>{item}</Link></li>
+              return <li key={index} className={style.items}><Link>{t(item)}</Link></li>
             })
           }
         </ul>
         <ul className={style.categories}>
           <div className={style.text}>
-            Customer Service
+            {t("Customer Service")}
           </div>
           {
             service && service?.map((item, index) => {
-              return <li key={index} className={style.items}><Link>{item}</Link></li>
+              return <li key={index} className={style.items}><Link>{t(item)}</Link></li>
             })
           }
         </ul>
         <div className={style.categories}>
           <div className={style.text}>
-            <p>Sign up for savings, news, and updates</p>
+            <p>{t("Sign up for savings, news, and updates")}</p>
           </div>
           <div className={style.email}>
-            <input type='email' placeholder='Email address' />
+            <input type='email' placeholder= {t("Enter email address")} />
             <button>
               <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 14 24">
                 <path id="chevron-left" d="M9.75,29a1.763,1.763,0,0,0,1.237-.5l10.5-10.286a1.69,1.69,0,0,0,0-2.424L10.987,5.5a1.776,1.776,0,0,0-2.475,0,1.69,1.69,0,0,0,0,2.424L17.775,17,8.513,26.074a1.69,1.69,0,0,0,0,2.424A1.763,1.763,0,0,0,9.75,29Z" transform="translate(-8 -5)"  />
@@ -85,8 +86,8 @@ export default function FooterMiddle({ navCategories, aboutus, service }) {
           </svg>
         </div >
         <div id={style.bottomFooterTxt}>
-          <span>Copyright 2013-2021 - Antoine Online - All Rights Reserved </span>
-          <span>Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry.</span>
+          <span>{t("Copyright 2013-2021 - Antoine Online - All Rights Reserved")}</span>
+          <span>{t("Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry.")}</span>
         </div>
       </div>
 

@@ -21,6 +21,7 @@
       "id": 2,
       "country": "India",
       "language": "English",
+      
       "currency": "Rupees",
       "flag": "images/India.webp",
       "states": [
@@ -95,7 +96,7 @@
     {
       "id": 7,
       "img": "images/Discout.png",
-      "text": "Coupan & Deals"
+      "text": "Coupons & Deals"
     }
   ],
   "books": [
@@ -109,7 +110,7 @@
     {
       "id": 2,
       "title": "The Sin Eater",
-      "author": " Campisi, Megan",
+      "author": "Campisi, Megan",
       "price": 400000,
       "img": "images/sin eater.png"
     },
@@ -135,6 +136,7 @@
       "img": "images/jocelyne.png"
     }
   ],
+  
   "languageBooks": [
     {
       "id": 1,
@@ -474,7 +476,7 @@
     {
       "id": 2,
       "title": "The Sin Eater",
-      "author": " Campisi, Megan",
+      "author": "Campisi, Megan",
       "narrator": "Ashish",
       "publisher": "Vikash",
       "price": 400000,
@@ -578,7 +580,7 @@
     {
       "id": 7,
       "title": "The Sin Eater",
-      "author": " Campisi, Megan",
+      "author": "Campisi, Megan",
       "price": 400000,
       "img": "images/sin eater.png",
       "category": [
@@ -699,7 +701,7 @@
     {
       "id": 13,
       "title": "The Sin Eater",
-      "author": " Campisi, Megan",
+      "author": "Campisi, Megan",
       "price": 400000,
       "img": "images/sin eater.png",
       "category": [

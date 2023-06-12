@@ -4,17 +4,38 @@ import { NavLink as Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { getMagazinesCategory } from '../../store/actions/listingAction'
 import img from '../../assests/images/guardians.png'
+import { t } from 'i18next'
+import jsCookie from 'js-cookie'
 
-export default function HeaderBottom({ navCategories }) {
+export default function HeaderBottom({ navCategories, language }) {
 
   const { category } = useSelector((state) => state.product)
   const dispatch = useDispatch()
-  // eslint-disable-next-line no-unused-vars
   let [state, setState] = useState(false)
+  console.log(document.dir);
+
+  const currentlancode = jsCookie.get('i18next') || 'en'
+  console.log(currentlancode);
+  let code = currentlancode.split('-')
+  console.log(code[0]);
+  // language.map((item)=> item.find(lan => lan.code === currentlancode))
+  const currentlan = language.find(lan => lan.code === code[0])
+  console.log(currentlan);
+  
 
   useEffect(() => {
     dispatch(getMagazinesCategory())
-  }, [dispatch])
+    
+    if (currentlan.code === 'lab') {
+      document.dir = 'rtl'
+      document.documentElement.lang = 'ar'
+  }
+  else if (currentlan.code === 'en') {
+      document.dir = 'ltr'
+      document.documentElement.lang = 'en'
+    }
+    document.title = t('ANTOINE')
+  }, [dispatch, currentlan])
 
   return (
     <>
@@ -25,7 +46,7 @@ export default function HeaderBottom({ navCategories }) {
               navCategories && navCategories?.map((navItem, index) => {
                 return (
                   <li key={index} className={header.navList}  /* onMouseOver={()=> {setState(true)}} onMouseOut={()=>{setState(false)}} */>
-                    <Link to={navItem} id={header.navlistLink}>{navItem}</Link>
+                    <Link to={navItem} id={header.navlistLink}>{t(navItem)}</Link>
                   </li>
                 )
               })

@@ -2,45 +2,44 @@ import React from "react";
 import header from "../../assests/css/header.module.css";
 import { path } from "../../constants/path";
 import { NavLink as Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import i18n from "../../i18n";
 
-export default function HeaderTop({ country }) {
-  // let [size, setSize] = useState();
-  // console.log(country);
+export default function HeaderTop({ country, language, onChange }) {
+  const {t} = useTranslation()
+
   return (
     <>
       <div className={header.container}>
         <div className={header.topContainer}>
           <ul className={header.topLeft}>
             <li>
-              <select>
-                {country &&
-                  country?.map((item, index) => {
-                    return <option key={index}>{item.country}</option>;
-                  })}
+              <select
+                name="country"
+                id="country"
+                className={header.topHeaderCountry}
+                onChange={onChange}
+                value={i18n.language}
+              >
+                {language.map(({ name, code }) => (
+                  <option value={code}>{t(name)}</option>
+                ))}
               </select>
             </li>
             <li>
               <select>
                 {country &&
                   country?.map((item, index) => {
-                    return <option key={index}>{item.language}</option>;
+                    return <option key={index}>{t(item.currency)}</option>;
                   })}
               </select>
             </li>
-            <li>
-              <select>
-                {country &&
-                  country?.map((item, index) => {
-                    return <option key={index}>{item.currency}</option>;
-                  })}
-              </select>
-            </li>
-            <li>Store Locator</li>
+            <li>{t('Store Locator')}</li>
           </ul>
           <ul className={header.topRight}>
             <li>
               <select>
-                <option>MyAccount</option>
+                <option>{t('My Account')}</option>
               </select>
             </li>
             <li className={header.wishlist}>
@@ -53,7 +52,7 @@ export default function HeaderTop({ country }) {
                     fill="#ffff"
                   />
                 </svg>
-                Wishlist
+                {t('Wishlist')}
               </Link>
             </li>
           </ul>

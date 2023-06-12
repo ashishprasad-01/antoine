@@ -8,6 +8,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getBooks } from "../../store/actions/homeActions";
 import axios from "axios";
 import toast from "react-hot-toast";
+import { t } from "i18next";
 const notify = () => toast.success("Added");
 
 export default function TrendingBooks() {
@@ -75,7 +76,7 @@ export default function TrendingBooks() {
   return (
     <div className={style.container}>
       <div className={style.trendingBooks}>
-        <p className={style.heading}>Trending Books</p>
+        <p className={style.heading}>{t("Trending Books")}</p>
         <Slider {...settings}>
           {trendingBook &&
             trendingBook.length > 0 &&
@@ -113,8 +114,8 @@ export default function TrendingBooks() {
                   </div>
                   <Link to={`/product/${item.id}`}>
                     <div className={style.desc}>
-                      <h3 className={style.title}>{item.title}</h3>
-                      <p className={style.author}>{item.author}</p>
+                      <h3 className={style.title}>{t(item.title)}</h3>
+                      <p className={style.author}>{t(item.author)}</p>
                       <p className={style.price}>LBP {item.price}</p>
                     </div>
                   </Link>

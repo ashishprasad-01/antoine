@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import style from '../../assests/css/mainbody.module.css'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { t } from 'i18next';
 
 
 export default function Deals({ deals }) {
@@ -53,7 +54,7 @@ export default function Deals({ deals }) {
                                 return (
                                     <div className={style.dealSlider} key={item.id}>
                                         <img src={item.img} alt='img' />
-                                        <p>{item.text}</p>
+                                        <p>{t(item.text)}</p>
                                     </div>
                                 )
                             })

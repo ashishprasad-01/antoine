@@ -7,10 +7,13 @@ import { path } from "../../constants/path";
 import { NavLink as Link } from "react-router-dom/dist";
 import { useDispatch, useSelector } from "react-redux";
 import { getCart } from "../../store/actions/cartActions";
+import { useTranslation } from "react-i18next";
 
 // import { NavLink as Link } from 'react-router-dom';
 
 export default function HeaderMiddle() {
+
+  const {t} = useTranslation()
   const { cartItem } = useSelector((state) => state.cart);
 
   let [state, setState] = useState(false);
@@ -168,9 +171,9 @@ export default function HeaderMiddle() {
 
           <div className={header.searchBar}>
             <select>
-              <option>All</option>
+              <option>{t('All')}</option>
             </select>
-            <input type="search" placeholder="search here" />
+            <input type="search" placeholder={t('search here')} />
             <button>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22">
                 <g id="search" transform="translate(-2 -2)">

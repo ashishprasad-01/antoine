@@ -14,6 +14,7 @@ import {
   sortProductsByName,
   sortProductsByPrice,
 } from "../../../store/slices/listingSlice";
+import { t } from "i18next";
 
 export default function Right() {
   const notify = () => toast.success("Product Added to Cart");
@@ -103,17 +104,17 @@ export default function Right() {
     <>
       <div className={book.rightSide}>
         <div className={book.topLeft}>
-          <p>Books<span>{records.length} of {allproducts.length}</span></p>
+          <p>{t("Books")}<span>{records.length} {t("of")} {allproducts.length}</span></p>
           
           <div className={book.topRight}>
             <form onChange={handleSubmit(submit)}>
               <select {...register("sortProducts")} defaultValue={"name_a_z"}>
                 <option value="name_a_z">
-                  Sort By Name A to Z
+                  {t("Sort By A to Z")}
                 </option>
-                <option value="name_z_a">Sort By Name Z to A</option>
-                <option value="l_to_h">Price Low to High</option>
-                <option value="h_to_l">Price High to Low</option>
+                <option value="name_z_a">{t("Sort By Z to A")}</option>
+                <option value="l_to_h">{t("Price Low to High")}</option>
+                <option value="h_to_l">{t("Price High to Low")}</option>
               </select>
             </form>
             <div className={book.view}>
@@ -160,7 +161,7 @@ export default function Right() {
                     />
                   </g>
                 </svg>
-                Grid
+                {t("Grid")}
               </button>
               <button
                 onClick={() => {
@@ -219,7 +220,7 @@ export default function Right() {
                     />
                   </g>
                 </svg>
-                List
+                {t("List")}
               </button>
             </div>
           </div>
@@ -274,8 +275,8 @@ export default function Right() {
                     }`}
                   >
                     <Link to={`/product/${item.id}`}>
-                      <p className={book.title}>{item.title}</p>
-                      <p className={book.author}>{item.author}</p>
+                      <p className={book.title}>{t(item.title)}</p>
+                      <p className={book.author}>{t(item.author)}</p>
 
                       {view === 0 ? (
                         <></>

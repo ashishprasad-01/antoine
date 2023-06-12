@@ -4,6 +4,7 @@ import style from "../../assests/css/mainbody.module.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import axios from "axios";
+import { t } from "i18next";
 
 export default function TrendingBooks({ toys }) {
   // console.log(trendingBook);
@@ -54,7 +55,7 @@ export default function TrendingBooks({ toys }) {
   return (
     <div className={style.container}>
       <div className={style.trendingBooks}>
-        <p className={style.heading}>Trending in Toys</p>
+        <p className={style.heading}>{t("Trending in Toys")}</p>
         <Slider {...settings}>
           {toys &&
             toys.length > 0 &&
@@ -79,8 +80,8 @@ export default function TrendingBooks({ toys }) {
                   </div>
 
                   <div className={style.desc}>
-                    <h3 className={style.title}>{item.title}</h3>
-                    <p className={style.author}>{item.brand}</p>
+                    <h3 className={style.title}>{t(item.title)}</h3>
+                    <p className={style.author}>{t(item.brand)}</p>
                     <p className={style.price}>LBP {item.price}</p>
                   </div>
                   <div className={style.cartBtn}>
