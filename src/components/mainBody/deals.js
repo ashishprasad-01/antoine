@@ -10,6 +10,7 @@ export default function Deals({ deals }) {
     const settings = {
         dots: false,
         infinite: false,
+        rtl: true,
         speed: 500,
         slidesToShow: 7,
         slidesToScroll: 1,
