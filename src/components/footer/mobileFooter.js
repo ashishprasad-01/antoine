@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import style from "../../assests/css/footer.module.css";
 import { NavLink as Link } from "react-router-dom";
+import { t } from "i18next";
 // import useWindowResize from '../../hooks/useWindowSize'
 
 export default function MobileFooter({ navCategories, aboutus, service }) {
@@ -27,9 +28,9 @@ export default function MobileFooter({ navCategories, aboutus, service }) {
       <div className={style.middleFooter}>
         <ul className={style.categories}>
           <div className={style.text} onClick={toggle}>
-            <span>Categories</span>
+            <span>{t("Categories")}</span>
             <svg
-            className={!state ? style.ddactive : style.ddnotActive}
+              className={!state ? style.ddactive : style.ddnotActive}
               xmlns="http://www.w3.org/2000/svg"
               width="10"
               height="10"
@@ -49,7 +50,7 @@ export default function MobileFooter({ navCategories, aboutus, service }) {
                 navCategories?.map((item, index) => {
                   return (
                     <li key={index} className={style.items}>
-                      <Link>{item}</Link>
+                      <Link>{t(item)}</Link>
                     </li>
                   );
                 })}
@@ -60,7 +61,7 @@ export default function MobileFooter({ navCategories, aboutus, service }) {
         </ul>
         <ul className={style.categories} onClick={toggle1}>
           <div className={style.text}>
-            <span>About Us</span>
+            <span>{t("About Us")}</span>
             <svg
               className={!state1 ? style.ddactive : style.ddnotActive}
               xmlns="http://www.w3.org/2000/svg"
@@ -82,7 +83,7 @@ export default function MobileFooter({ navCategories, aboutus, service }) {
                 aboutus?.map((item, index) => {
                   return (
                     <li key={index} className={style.items}>
-                      <Link>{item}</Link>
+                      <Link>{t(item)}</Link>
                     </li>
                   );
                 })}
@@ -93,7 +94,7 @@ export default function MobileFooter({ navCategories, aboutus, service }) {
         </ul>
         <ul className={style.categories} onClick={toggle2}>
           <div className={style.text}>
-            <span>Customer Service</span>
+            <span>{t("Customer Service")}</span>
             <svg
               className={!state2 ? style.ddactive : style.ddnotActive}
               xmlns="http://www.w3.org/2000/svg"
@@ -115,7 +116,7 @@ export default function MobileFooter({ navCategories, aboutus, service }) {
                 service?.map((item, index) => {
                   return (
                     <li key={index} className={style.items}>
-                      <Link>{item}</Link>
+                      <Link>{t(item)}</Link>
                     </li>
                   );
                 })}
@@ -126,7 +127,7 @@ export default function MobileFooter({ navCategories, aboutus, service }) {
         </ul>
         <div className={style.subs}>
           <div className={style.text}>
-            <p>Sign up for savings, news, and updates</p>
+            <p>{t("Sign up for savings, news, and updates")}</p>
           </div>
           <div className={style.email}>
             <input type="email" placeholder="Email address" />
@@ -260,11 +261,12 @@ export default function MobileFooter({ navCategories, aboutus, service }) {
         </div>
         <div id={style.bottomFooterTxt}>
           <span>
-            Copyright 2013-2021 - Antoine Online - All Rights Reserved{" "}
+            {t("Copyright 2013-2021 - Antoine Online - All Rights Reserved")}{" "}
           </span>
           <span>
-            Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting
-            Industry.
+            {t(
+              "Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry."
+            )}
           </span>
         </div>
       </div>
