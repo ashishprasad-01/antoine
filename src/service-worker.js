@@ -40,28 +40,34 @@ registerRoute(
   createHandlerBoundToURL(process.env.PUBLIC_URL + "/index.html")
 );
 
-// An example runtime caching route for requests that aren't handled by the
-// precache, in this case same-origin .png requests like those from in public/
 registerRoute(
-  // Add in any other file extensions or routing criteria as needed.
   ({ url }) =>
-    url.origin === self.location.origin && url.pathname.endsWith(".png"), // Customize this strategy as needed, e.g., by changing to CacheFirst.
+    url.origin === self.location.origin && url.pathname.endsWith(".png"),
   new StaleWhileRevalidate({
     cacheName: "images",
+    plugins: [new ExpirationPlugin({ maxEntries: 50 })],
+  })
+);
+
+registerRoute(
+  // Return false to exempt requests from being fulfilled by index.html.
+  ({ url }) =>
+    url.origin === "https://antoine--ashishranjanpra.repl.co" ||
+    url.pathname === "/categories",
+  new StaleWhileRevalidate({
+    cacheName: "categories",
     plugins: [
-      // Ensure that once this runtime cache reaches a maximum size the
-      // least-recently used images are removed.
-      new ExpirationPlugin({ maxEntries: 50 }),
+      new ExpirationPlugin({
+        maxEntries: 1,
+      }),
     ],
   })
 );
 
-// This allows the web app to trigger skipWaiting via
-// registration.waiting.postMessage({type: 'SKIP_WAITING'})
+
+
 self.addEventListener("message", (event) => {
   if (event.data && event.data.type === "SKIP_WAITING") {
     self.skipWaiting();
   }
 });
-
-// Any other custom service worker logic can go here.
