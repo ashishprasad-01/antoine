@@ -31,5 +31,4 @@ const sortByPrice = (products, type = "ASC") => {
   }
 };
 
-
 export { sortByName, sortByPrice };
