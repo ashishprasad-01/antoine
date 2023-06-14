@@ -38,9 +38,7 @@ registerRoute(
     return true;
   },
   createHandlerBoundToURL(process.env.PUBLIC_URL + "/index.html"),
-  createHandlerBoundToURL(process.env.PUBLIC_URL + "static/js/bundle.js"),
-  createHandlerBoundToURL(process.env.PUBLIC_URL + "static/js/main.5ae605be.js"),
-  createHandlerBoundToURL("https://antoine--ashishranjanpra.repl.co/categories")
+
 );
 
 // An example runtime caching route for requests that aren't handled by the
