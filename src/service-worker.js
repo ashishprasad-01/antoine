@@ -16,7 +16,9 @@ import { StaleWhileRevalidate } from "workbox-strategies";
 clientsClaim();
 skipWaiting();
 
-precacheAndRoute(self.__WB_MANIFEST);
+precacheAndRoute([{ 
+  url: self.__WB_MANIFEST
+}]);
 
 const fileExtensionRegexp = new RegExp("/[^/?]+\\.[^/]+$");
 registerRoute(
@@ -37,8 +39,7 @@ registerRoute(
 
     return true;
   },
-  createHandlerBoundToURL(process.env.PUBLIC_URL + "/index.html"),
-
+  createHandlerBoundToURL(process.env.PUBLIC_URL + "/index.html")
 );
 
 // An example runtime caching route for requests that aren't handled by the
