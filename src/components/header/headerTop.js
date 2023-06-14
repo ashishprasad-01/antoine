@@ -22,7 +22,7 @@ export default function HeaderTop({ country, language, onChange }) {
                 value={i18n.language}
               >
                 {language.map(({ name, code }) => (
-                  <option value={code}>{t(name)}</option>
+                  <option value={code} key={code}>{t(name)}</option>
                 ))}
               </select>
             </li>

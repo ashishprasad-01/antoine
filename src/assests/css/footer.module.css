@@ -52,7 +52,7 @@
 .middleFooter {
   display: flex;
   padding: 20px 0;
-  border-bottom: 1px solid #eeeeee;
+  border-bottom: 1px solid #0000001A;
 }
 
 .categories {
@@ -170,6 +170,19 @@
   margin: 10px 5px;
   display: flex;
   flex-direction: column;
+}
+
+.socialMediaLinks{
+  display: flex;
+  padding: 40px 0 0;
+}
+
+.socialMediaLinks .socialMedia{
+  padding: 0 24px;
+}
+
+.socialMediaLinks .socialMedia:first-child{
+  padding-left: 0;
 }
 
 [dir = "rtl"] .email{
