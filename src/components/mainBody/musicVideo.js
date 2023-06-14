@@ -6,10 +6,11 @@ import "slick-carousel/slick/slick-theme.css";
 import axios from "axios";
 import { path } from "../../constants/path";
 import { NavLink as Link } from "react-router-dom";
-import { t } from "i18next";
+import { useTranslation } from "react-i18next";
 
 export default function MusicVideo({ music }) {
   // console.log(trendingBook);
+  const { t } = useTranslation();
   let [banner, setBanner] = useState([]);
   const getBanner = async () => {
     let { data } = await axios.get(path.banner);
@@ -35,7 +36,7 @@ export default function MusicVideo({ music }) {
     speed: 500,
     slidesToShow: 5,
     slidesToScroll: 1,
-    arrows:false,
+    arrows: false,
     responsive: [
       {
         breakpoint: 1024,
@@ -75,8 +76,8 @@ export default function MusicVideo({ music }) {
             music?.map((item) => {
               return (
                 <div key={item.id} className={style.card}>
-                  <Link to={`/product/${item.id}`} >
-                  <img src={item.img} alt={item.title} />
+                  <Link to={`/product/${item.id}`}>
+                    <img src={item.img} alt={item.title} />
                   </Link>
                   <div className={style.wishlist}>
                     <svg

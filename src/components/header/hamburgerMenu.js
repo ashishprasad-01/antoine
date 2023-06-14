@@ -222,17 +222,13 @@ export default function HamburgerMenu({ toggle }) {
                     navCategories?.map((navItem, index) => {
                       return (
                         <>
-                          <li
-                            key={index}
-                            className={header.sideNavList}
-                            
-                          >
+                          <li key={index} className={header.sideNavList}>
                             <Link to={path.magazineListing}>{navItem}</Link>
                             <svg
-                            onClick={() => {
-                              setArrow(!arrow);
-                              setName(navItem);
-                            }}
+                              onClick={() => {
+                                setArrow(!arrow);
+                                setName(navItem);
+                              }}
                               xmlns="http://www.w3.org/2000/svg"
                               width="7"
                               height="12"
@@ -391,9 +387,8 @@ export default function HamburgerMenu({ toggle }) {
               )}
             </div>
           )}
-
         </div>
-          <div id={header.abc} onClick={()=>toggle()}></div>
+        <div id={header.abc} onClick={() => toggle()}></div>
       </div>
     </>
   );

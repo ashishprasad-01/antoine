@@ -10,25 +10,24 @@ import ErrorPage from "../components/error/errorpage";
 import Wishlist from "../components/wishlist/wishlist";
 import Main from "../components/productPage/productListing/main";
 
-
 const routes = () => {
-    return (
-        <>
-            <Router>
-                <HeaderMain />
-                <Routes>
-                    <Route path={path.root} element={<MainBody />}></Route>
-                    <Route path={path.magazineListing} element={<Main/>}></Route>
-                    <Route path={path.productDetail} element={<ProductDetail/>}></Route>
-                    <Route path={path.cart} element={<Cart/>}></Route>
-                    <Route path={path.checkOut} element={<Checkout/>}></Route>
-                    <Route path={path.wishlist} element={<Wishlist/>}></Route>
-                    <Route path='/*' element={<ErrorPage/>}></Route>
-                </Routes>
-                <FooterMain />
-            </Router>
-        </>
-    )
-}
+  return (
+    <>
+      <Router>
+        <HeaderMain />
+        <Routes>
+          <Route path={path.root} element={<MainBody />}></Route>
+          <Route path={path.magazineListing} element={<Main />}></Route>
+          <Route path={path.productDetail} element={<ProductDetail />}></Route>
+          <Route path={path.cart} element={<Cart />}></Route>
+          <Route path={path.checkOut} element={<Checkout />}></Route>
+          <Route path={path.wishlist} element={<Wishlist />}></Route>
+          <Route path="/*" element={<ErrorPage />}></Route>
+        </Routes>
+        <FooterMain />
+      </Router>
+    </>
+  );
+};
 
-export default routes
+export default routes;

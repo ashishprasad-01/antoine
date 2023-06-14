@@ -3,9 +3,10 @@ import { useState } from "react";
 import checkout from "./checkout.module.css";
 import AddressForm from "./addressForm";
 import { useSelector } from "react-redux";
-import { t } from "i18next";
+import { useTranslation } from "react-i18next";
 
 const ChekoutLeft = ({ setProgressBar }) => {
+  const { t } = useTranslation();
   let { cartItem } = useSelector((state) => state.cart);
   const [toggleForm, setToggleForm] = useState(true);
   const [modalIsOpen, setIsOpen] = useState(false);
@@ -151,7 +152,9 @@ const ChekoutLeft = ({ setProgressBar }) => {
                   onChange={() => setToggleForm(!toggleForm)}
                 />{" "}
                 <label htmlFor="40000">LBP 40,000</label>{" "}
-                <span>{t("Home")} {t("delivery")}</span>
+                <span>
+                  {t("Home")} {t("delivery")}
+                </span>
               </div>
             </div>
 
@@ -160,9 +163,13 @@ const ChekoutLeft = ({ setProgressBar }) => {
                 <>
                   <div className={checkout.FormContainer}>
                     <div className={checkout.shippingMethodFormFeild}>
-                      <label htmlFor="store">{t("Select")} {t("Store")}</label>
+                      <label htmlFor="store">
+                        {t("Select")} {t("Store")}
+                      </label>
                       <select name="store" id="store">
-                        <option value="Select-a-store">{t("Select")} a {t("Store")}</option>
+                        <option value="Select-a-store">
+                          {t("Select")} a {t("Store")}
+                        </option>
                         <option value="Achrafieh-Sassine">
                           Achrafieh – Sassine
                         </option>
@@ -171,12 +178,16 @@ const ChekoutLeft = ({ setProgressBar }) => {
 
                     <div className={checkout.pickupAddressDetails}>
                       <div className={checkout.pickupAddressTitle}>
-                        <strong>{t("Store")} {t("Name")}:</strong>
+                        <strong>
+                          {t("Store")} {t("Name")}:
+                        </strong>
                         <span>Achrafieh – Sassine</span>
                       </div>
 
                       <div className={checkout.pickupAddressTitle}>
-                        <strong>{t("Store")} {t("Address")}</strong>
+                        <strong>
+                          {t("Store")} {t("Address")}
+                        </strong>
                         <div className={checkout.pickupAddress}>
                           <span>
                             Independence Street (Elias Sarkis Avenue، Lebanon)

@@ -4,10 +4,11 @@ import style from "../../assests/css/mainbody.module.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import axios from "axios";
-import { t } from "i18next";
+import { useTranslation } from "react-i18next";
 
 export default function TrendingBooks({ toys }) {
   // console.log(trendingBook);
+  const { t } = useTranslation();
   const addToCart = async (title, author, img, price) => {
     let { data } = await axios.post(
       `${process.env.REACT_APP_API_BASE_URL}/cart`,
@@ -23,7 +24,7 @@ export default function TrendingBooks({ toys }) {
     speed: 500,
     slidesToShow: 5,
     slidesToScroll: 1,
-    arrows:false,
+    arrows: false,
     responsive: [
       {
         breakpoint: 1024,

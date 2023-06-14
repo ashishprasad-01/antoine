@@ -31,11 +31,9 @@ export default function HeaderMain() {
     },
   ];
 
-
   useEffect(() => {
     dispatch(getHeaderCountry());
     dispatch(getHeaderNav({ id: "test" }));
-
   }, [dispatch]);
 
   const handleClick = (e) => {
@@ -58,7 +56,7 @@ export default function HeaderMain() {
             <div className={header.headerContainer}>
               <HeaderMiddle />
               {/* <hr/> */}
-              <HeaderBottom navCategories={navCategories} language={language}/>
+              <HeaderBottom navCategories={navCategories} language={language} />
             </div>
             {/* <MegaMenu/> */}
           </>

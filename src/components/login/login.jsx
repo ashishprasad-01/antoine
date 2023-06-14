@@ -6,7 +6,7 @@ export default function Login() {
   const submit = (data) => {
     console.log(data);
   };
-  
+
   return (
     <>
       <form onSubmit={handleSubmit(submit)}>

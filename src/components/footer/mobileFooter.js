@@ -1,15 +1,13 @@
 import React, { useState } from "react";
 import style from "../../assests/css/footer.module.css";
 import { NavLink as Link } from "react-router-dom";
-import { t } from "i18next";
-// import useWindowResize from '../../hooks/useWindowSize'
+import { useTranslation } from "react-i18next";
 
 export default function MobileFooter({ navCategories, aboutus, service }) {
+  const { t } = useTranslation();
   let [state, setState] = useState(true);
   let [state1, setState1] = useState(true);
   let [state2, setState2] = useState(true);
-  // let {width} = useWindowResize();
-  // console.log(width);
 
   const toggle = () => {
     setState(!state);

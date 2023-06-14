@@ -54,7 +54,7 @@ const listingSlice = createSlice({
           (ele) => ele.toLowerCase() === language.toLowerCase()
         );
       });
-      state.allproducts = data
+      state.allproducts = data;
     },
   },
 
@@ -97,6 +97,10 @@ const listingSlice = createSlice({
   },
 });
 
-export const { sortProductsByName, sortProductsByPrice, filterCategory, filterByLanguage } =
-  listingSlice.actions;
+export const {
+  sortProductsByName,
+  sortProductsByPrice,
+  filterCategory,
+  filterByLanguage,
+} = listingSlice.actions;
 export default listingSlice.reducer;

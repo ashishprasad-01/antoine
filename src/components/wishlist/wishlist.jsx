@@ -1,8 +1,10 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { deleteWishlistItem, getWishlist } from "../../store/actions/wishlistActios";
+import {
+  deleteWishlistItem,
+  getWishlist,
+} from "../../store/actions/wishlistActios";
 import style from "./wishlist.module.css";
-// import { NavLink as Link } from "react-router-dom";
 import axios from "axios";
 import { toast } from "react-hot-toast";
 import { useState } from "react";
@@ -10,7 +12,7 @@ import { useState } from "react";
 export default function Wishlist() {
   const { wishlist } = useSelector((state) => state.wishlist);
 
-  let[active, setActive] = useState(0)
+  let [active, setActive] = useState(0);
   console.log(active);
 
   const notify = () => toast.success("Product Added to Cart");
@@ -18,13 +20,16 @@ export default function Wishlist() {
   const dispatch = useDispatch();
 
   const addToCart = async (title, author, img, price) => {
-    await axios.post(
-      `${process.env.REACT_APP_API_BASE_URL}/cart`,
-      { title, author, img, price, qty: 1 }
-    );
-    setActive(1)
+    await axios.post(`${process.env.REACT_APP_API_BASE_URL}/cart`, {
+      title,
+      author,
+      img,
+      price,
+      qty: 1,
+    });
+    setActive(1);
 
-    notify()
+    notify();
   };
 
   useEffect(() => {
@@ -75,9 +80,9 @@ export default function Wishlist() {
                     Add To Cart
                   </button>
                   <svg
-                   onClick={() => {
-                    dispatch(deleteWishlistItem(item.id))
-                    setActive(0)
+                    onClick={() => {
+                      dispatch(deleteWishlistItem(item.id));
+                      setActive(0);
                     }}
                     className={style.deleteBtn}
                     xmlns="http://www.w3.org/2000/svg"

@@ -8,12 +8,12 @@ import { useDispatch, useSelector } from "react-redux";
 import { getBooks } from "../../store/actions/homeActions";
 import axios from "axios";
 import toast from "react-hot-toast";
-import { t } from "i18next";
+import { useTranslation } from "react-i18next";
 const notify = () => toast.success("Added");
 
 export default function TrendingBooks() {
   const { trendingBook } = useSelector((state) => state.body);
-
+  const { t } = useTranslation();
   const dispatch = useDispatch();
 
   const addToCart = async (title, author, img, price) => {
@@ -84,10 +84,7 @@ export default function TrendingBooks() {
             trendingBook?.map((item) => {
               return (
                 <div className={style.card} key={item.id}>
-                  <img
-                    src={`/${item.img}`}
-                    alt={item.title}
-                  />
+                  <img src={`/${item.img}`} alt={item.title} />
                   <div
                     className={style.wishlist}
                     onClick={() => {

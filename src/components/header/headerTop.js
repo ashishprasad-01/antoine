@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 import i18n from "../../i18n";
 
 export default function HeaderTop({ country, language, onChange }) {
-  const {t} = useTranslation()
+  const { t } = useTranslation();
 
   return (
     <>
@@ -34,12 +34,12 @@ export default function HeaderTop({ country, language, onChange }) {
                   })}
               </select>
             </li>
-            <li>{t('Store Locator')}</li>
+            <li>{t("Store Locator")}</li>
           </ul>
           <ul className={header.topRight}>
             <li>
               <select>
-                <option>{t('My Account')}</option>
+                <option>{t("My Account")}</option>
               </select>
             </li>
             <li className={header.wishlist}>
@@ -52,7 +52,7 @@ export default function HeaderTop({ country, language, onChange }) {
                     fill="#ffff"
                   />
                 </svg>
-                {t('Wishlist')}
+                {t("Wishlist")}
               </Link>
             </li>
           </ul>

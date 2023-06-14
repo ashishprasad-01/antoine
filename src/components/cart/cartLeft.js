@@ -5,9 +5,10 @@ import {
   deleteCartItem,
   incDecQuantity,
 } from "../../store/actions/cartActions";
-import { t } from "i18next";
+import { useTranslation } from "react-i18next";
 
 export default function CartLeft({ cartItem }) {
+  const { t } = useTranslation();
   let [inc, setInc] = useState(0);
   const dispatch = useDispatch();
 

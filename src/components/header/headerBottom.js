@@ -4,22 +4,19 @@ import { NavLink as Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getMagazinesCategory } from "../../store/actions/listingAction";
 import img from "../../assests/images/guardians.png";
-import { t } from "i18next";
 import jsCookie from "js-cookie";
+import { useTranslation } from "react-i18next";
 
 export default function HeaderBottom({ navCategories, language }) {
+  const { t } = useTranslation();
   const { category } = useSelector((state) => state.product);
   const dispatch = useDispatch();
   let [state, setState] = useState(false);
-  console.log(document.dir);
 
   const currentlancode = jsCookie.get("i18next") || "en";
-  console.log(currentlancode);
+
   let code = currentlancode.split("-");
-  console.log(code[0]);
-  // language.map((item)=> item.find(lan => lan.code === currentlancode))
   const currentlan = language.find((lan) => lan.code === code[0]);
-  console.log(currentlan);
 
   useEffect(() => {
     dispatch(getMagazinesCategory());
@@ -32,7 +29,7 @@ export default function HeaderBottom({ navCategories, language }) {
       document.documentElement.lang = "en";
     }
     document.title = t("ANTOINE");
-  }, [dispatch, currentlan]);
+  }, [dispatch, currentlan, t]);
 
   return (
     <>
@@ -44,9 +41,10 @@ export default function HeaderBottom({ navCategories, language }) {
                 return (
                   <li
                     key={index}
-                    className={
-                      header.navList
-                    } /* onMouseOver={()=> {setState(true)}} onMouseOut={()=>{setState(false)}} */
+                    className={header.navList}
+                    onMouseOver={() => {
+                      setState(true);
+                    }}
                   >
                     <Link to={navItem} id={header.navlistLink}>
                       {t(navItem)}
@@ -56,10 +54,14 @@ export default function HeaderBottom({ navCategories, language }) {
               })}
           </ul>
 
-          {/* <HamburgerMenu navCategories = {navCategories}/> */}
           {state ? (
             <div className={header.megaMenuContainer}>
-              <div className={header.megaMenu}>
+              <div
+                className={header.megaMenu}
+                onMouseOut={() => {
+                  setState(false);
+                }}
+              >
                 <ul>
                   <p>
                     <span>Top Subjects</span>

@@ -5,13 +5,13 @@ import {
   filterByLanguage,
   filterCategory,
 } from "../../../store/slices/listingSlice";
-import { t } from "i18next";
-// import { NavLink as Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 export default function Left() {
   const { category } = useSelector((state) => state.product);
   const dispatch = useDispatch();
 
+  const { t } = useTranslation();
   return (
     <>
       <div className={book.leftSide}>
