@@ -11,10 +11,6 @@ export const fetchCountry = () => {
     return axios.get(path.topNavApi)
 }
 
-// export const fetchFooter = () => {
-//     return axios.get(path.topFooter)
-// }
-
 export const fetchAboutus = () => {
     return axios.get(path.aboutus)
 }

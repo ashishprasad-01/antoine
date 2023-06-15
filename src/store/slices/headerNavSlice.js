@@ -21,16 +21,16 @@ const headerNavSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
-      .addCase(getHeaderNav.pending, (state) => {
-        state.loading = true;
-      })
+
       .addCase(getHeaderNav.fulfilled, (state, action) => {
+        console.log('nav Slice');
         state.navCategories = action.payload;
         state.loading = false;
       })
-      .addCase(getHeaderNav.rejected, (state) => {
-        state.loading = false;
-      })
+
+      
+
+
       .addCase(getHeaderCountry.pending, (state) => {
         state.loading = true;
       })

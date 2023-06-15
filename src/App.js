@@ -1,14 +1,18 @@
 import "./App.css";
-// import { Provider } from 'react-redux';
-// import store from './store';
 import Routes from "./routes";
 import { Toaster } from "react-hot-toast";
-
+import { QueryClient, QueryClientProvider } from "react-query";
+import { ReactQueryDevtools } from "react-query/devtools";
 function App() {
+  const queryClient = new QueryClient();
   return (
     <>
-      <Routes />
-      <Toaster position="top-center" />
+      <QueryClientProvider client={queryClient}>
+        {/* <ReactQueryDevtools> */}
+          <Routes />
+          <Toaster position="top-center" />
+        <ReactQueryDevtools initialIsOpen={false} position="bottom-right"/>
+      </QueryClientProvider>
     </>
   );
 }

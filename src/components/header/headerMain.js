@@ -16,7 +16,6 @@ import i18next from "i18next";
 export default function HeaderMain() {
   const { navCategories, country } = useSelector((state) => state.navigation);
   const dispatch = useDispatch();
-
   const path = useLocation();
 
   const language = [
@@ -33,7 +32,7 @@ export default function HeaderMain() {
 
   useEffect(() => {
     dispatch(getHeaderCountry());
-    dispatch(getHeaderNav({ id: "test" }));
+    // dispatch(getHeaderNav({ id: "test" }));
   }, [dispatch]);
 
   const handleClick = (e) => {
