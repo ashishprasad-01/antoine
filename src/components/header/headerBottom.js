@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import header from "../../assests/css/header.module.css";
 import { NavLink as Link } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { getMagazinesCategory } from "../../store/actions/listingAction";
 
 import jsCookie from "js-cookie";
@@ -10,7 +10,6 @@ import MegaMenu from "./megaMenu";
 
 export default function HeaderBottom({ navCategories, language }) {
   const { t } = useTranslation();
-  const { category } = useSelector((state) => state.product);
   const dispatch = useDispatch();
   let [state, setState] = useState(false);
 
@@ -56,7 +55,9 @@ export default function HeaderBottom({ navCategories, language }) {
           </ul>
 
           {state ? (
-            <><MegaMenu setState={setState}/></>
+            <>
+              <MegaMenu setState={setState} />
+            </>
           ) : (
             <></>
           )}
