@@ -7,7 +7,7 @@ import CartRight from "./cartRight";
 import CartLeft from "./cartLeft";
 import { useTranslation } from "react-i18next";
 export default function Cart() {
-  const { t } = useTranslation;
+  const { t } = useTranslation();
   const { cartItem } = useSelector((state) => state.cart);
   const dispatch = useDispatch();
 

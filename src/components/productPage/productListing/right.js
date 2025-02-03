@@ -28,13 +28,13 @@ export default function Right() {
 
   let [view, setView] = useState(0);
 
-  const [currentPage, setCurrenPage] = useState(1);
-  const recordsPerPage = 8;
-  const lastIndex = currentPage * recordsPerPage;
-  const firstIndex = lastIndex - recordsPerPage;
-  const records = allproducts.slice(firstIndex, lastIndex);
-  const page = Math.ceil(allproducts.length / recordsPerPage);
-  const numbers = [...Array(page + 1).keys()].slice(1);
+    const [currentPage, setCurrenPage] = useState(1);
+    const recordsPerPage = 8;
+    const lastIndex = currentPage * recordsPerPage;
+    const firstIndex = lastIndex - recordsPerPage;
+    const records = allproducts.slice(firstIndex, lastIndex);
+    const page = Math.ceil(allproducts.length / recordsPerPage);
+    const numbers = [...Array(page + 1).keys()].slice(1);
 
   console.log(records);
 
